@@ -47,3 +47,15 @@ for (const viewport of Object.keys(SPEC.viewports)) {
     }
   });
 }
+
+test('slow web fonts: big words are fitted again once the fonts arrive', async ({ page }) => {
+  // Fonts arriving after the first render used to leave "hund" at 90px.
+  await page.route('https://fonts.gstatic.com/**', async (route) => {
+    await new Promise((r) => setTimeout(r, 800));
+    await route.continue();
+  });
+  await openDemo(page, 'desktop', 'start');
+  await page.waitForFunction(() => document.fonts.status === 'loaded');
+  const sizes = await page.locator('.card-example').evaluateAll((els) => els.map((e) => getComputedStyle(e).fontSize));
+  expect(sizes).toEqual(['96px', '96px', '96px']);
+});

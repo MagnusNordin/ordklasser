@@ -1,7 +1,7 @@
 // Quiz screen: timer, ruler, the word, status line and the class buttons.
 import { fill, formatTime, splitExample } from '../format.js';
 import { choiceState, elapsedMs, exampleLines, isChoiceDimmed, isChoiceDisabled, rulerTicks, showBadge, statusLine } from '../game.js';
-import { ICONS, classVars, esc, fitText } from './dom.js';
+import { ICONS, classVars, esc, fitTextWhenReady } from './dom.js';
 
 export function timerText(state, now) {
   return formatTime(elapsedMs(state, now)) + ' s';
@@ -86,7 +86,7 @@ export function render(state, ctx, root) {
     e.preventDefault();
     ctx.onPick(key);
   });
-  fitText(root.querySelector('.word'));
+  fitTextWhenReady(root.querySelector('.word'));
 }
 
 export function updateTimer(state, now, root) {

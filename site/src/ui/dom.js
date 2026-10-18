@@ -30,3 +30,10 @@ export function fitText(el, minPx = 28) {
     el.style.fontSize = size + 'px';
   }
 }
+
+// Fits now and again once web fonts have loaded: before that the fallback
+// font measures differently and would leave the text needlessly small.
+export function fitTextWhenReady(el, minPx) {
+  fitText(el, minPx);
+  el.ownerDocument.fonts?.ready?.then(() => { if (el.isConnected) fitText(el, minPx); });
+}

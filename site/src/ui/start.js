@@ -1,6 +1,6 @@
 // Start screen: the classes with examples, the start button and best time.
 import { fill, formatTime } from '../format.js';
-import { ICONS, classVars, esc, fitText } from './dom.js';
+import { ICONS, classVars, esc, fitTextWhenReady } from './dom.js';
 
 // ctx: { config, mobile, best, onStart }
 export function render(state, ctx, root) {
@@ -38,5 +38,5 @@ export function render(state, ctx, root) {
     </div>
   </div>`;
   root.querySelector('[data-testid="start-button"]').addEventListener('click', () => ctx.onStart());
-  root.querySelectorAll('.card-example').forEach((el) => fitText(el));
+  root.querySelectorAll('.card-example').forEach((el) => fitTextWhenReady(el));
 }

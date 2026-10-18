@@ -4,7 +4,7 @@ import { DEMO_SCREENS, demoState } from '../../site/src/demo.js';
 import { bestLine, choiceState, elapsedMs, exampleLines, missLine, showBadge, statusLine } from '../../site/src/game.js';
 import { formatTime } from '../../site/src/format.js';
 import { MOBILE_QUERY, REDUCED_MOTION_QUERY, matches, watch } from '../../site/src/layout.js';
-import { classVars, esc, fitText } from '../../site/src/ui/dom.js';
+import { classVars, esc, fitText, fitTextWhenReady } from '../../site/src/ui/dom.js';
 import { makeDom, realConfig } from './helpers.mjs';
 
 const { texts, classMap } = realConfig();
@@ -105,4 +105,30 @@ test('fitText shrinks until the text fits', () => {
   size = 100;
   fitText(el, 90);
   assert.equal(size, 90, 'stops at the minimum');
+});
+
+test('fitTextWhenReady fits again after web fonts load, if still on the page', async () => {
+  let ready;
+  const fonts = { ready: new Promise((r) => { ready = r; }) };
+  let calls = 0;
+  const el = {
+    isConnected: true,
+    clientWidth: 0, // no layout → fitText returns early, but we count the attempts
+    ownerDocument: { fonts, get defaultView() { calls++; return null; } }
+  };
+  fitTextWhenReady(el);
+  assert.equal(calls, 1);
+  ready();
+  await fonts.ready;
+  await Promise.resolve();
+  assert.equal(calls, 2);
+  const gone = { ...el, isConnected: false, ownerDocument: { fonts: { ready: Promise.resolve() }, get defaultView() { calls++; return null; } } };
+  calls = 0;
+  fitTextWhenReady(gone);
+  await Promise.resolve();
+  await Promise.resolve();
+  assert.equal(calls, 1, 'detached element is left alone');
+  const { doc } = makeDom();
+  const plain = doc.createElement('div');
+  assert.doesNotThrow(() => fitTextWhenReady(plain), 'no document.fonts (jsdom)');
 });
