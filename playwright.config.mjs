@@ -7,7 +7,8 @@ export default defineConfig({
   testMatch: '*.spec.mjs',
   fullyParallel: true,
   retries: process.env.CI ? 1 : 0,
-  reporter: process.env.CI ? [['list'], ['html', { open: 'never' }]] : 'list',
+  // In CI, failures also become public annotations on the run (logs need a sign-in).
+  reporter: process.env.CI ? [['list'], ['github'], ['html', { open: 'never' }]] : 'list',
   outputDir: 'test-results',
   use: {
     baseURL: `http://localhost:${PORT}/`,
