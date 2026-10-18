@@ -39,9 +39,13 @@ does not cover: **a word can belong to more than one class**.
 | Framework | None – vanilla HTML, CSS, ES modules | Three screens and a timer don't need a framework. No build step means "edit JSON → push → live". |
 | Build | None | GitHub Pages serves `site/` as-is. |
 | Config format | JSON files in `site/config/` | Readable, editable in GitHub's web editor, fetchable from the browser. |
-| Tests | `node:test` (built into Node 20+), no dependencies | Pure game logic is unit-tested in CI without `npm install`. |
+| Unit tests | `node:test` (built into Node 22) + `jsdom` for UI modules | Fast, no browser needed. Built-in coverage with enforced thresholds. |
+| Design verification | Playwright (`@playwright/test`) against the design's reference images and measured specs | Every step is checked against the design automatically, not by eye. See section 10. |
 | Config validation | `scripts/validate-config.mjs` run in CI | A typo in the word list fails the deploy instead of breaking the live game. |
-| Deploy | GitHub Actions → `actions/deploy-pages` | Official Pages flow; deploys only after validation and tests pass. |
+| Deploy | GitHub Actions → `actions/deploy-pages` | Official Pages flow; deploys only after validation, unit tests and design checks pass. |
+
+The site itself still has no build step and no runtime dependencies;
+`package.json` only holds dev dependencies for testing.
 | Fonts | Google Fonts: Bricolage Grotesque (display), Atkinson Hyperlegible (body) | As in the design. |
 | Storage | `localStorage` (wrapped in try/catch) | Best time per configuration; the game works fine without it. |
 
@@ -72,13 +76,35 @@ ordklasser/
 │     ├─ classes.json            ← word class definitions + colors
 │     ├─ words.json              ← the word bank
 │     └─ texts.sv.json           ← all UI strings
+├─ design/
+│  ├─ source/                    ← the canvas's .dc.html artboards, as exported
+│  ├─ reference/                 ← one PNG per artboard (10 images)
+│  └─ spec.json                  ← measured values from the design (section 10.2)
 ├─ scripts/
-│  └─ validate-config.mjs
+│  ├─ validate-config.mjs
+│  └─ capture-design.mjs         ← renders design/source → design/reference
 ├─ tests/
-│  ├─ round.test.mjs
-│  ├─ game.test.mjs
-│  ├─ format.test.mjs
-│  └─ config.test.mjs            ← runs the validator on the real config
+│  ├─ unit/                      ← node:test, one file per src module
+│  │  ├─ config.test.mjs
+│  │  ├─ round.test.mjs
+│  │  ├─ game.test.mjs
+│  │  ├─ format.test.mjs
+│  │  ├─ storage.test.mjs
+│  │  ├─ tokens.test.mjs         ← CSS tokens equal design values
+│  │  ├─ design-assets.test.mjs  ← references and spec are complete
+│  │  ├─ content.test.mjs        ← texts/classes equal the design
+│  │  ├─ parity.test.mjs         ← our logic vs. the prototype's logic
+│  │  ├─ ui-start.test.mjs       ← jsdom
+│  │  ├─ ui-quiz.test.mjs        ← jsdom
+│  │  └─ ui-result.test.mjs      ← jsdom
+│  ├─ fixtures/                  ← broken/edge-case configs for the validator
+│  └─ design/                    ← Playwright: compare app with the design
+│     ├─ visual.spec.mjs
+│     ├─ spec-values.spec.mjs
+│     ├─ flow.spec.mjs
+│     └─ a11y.spec.mjs
+├─ playwright.config.mjs
+├─ package.json                  ← dev dependencies + npm scripts only
 ├─ .github/workflows/pages.yml
 ├─ docs/PLAN.md                  ← this file
 └─ README.md                     ← how to run locally and edit words
@@ -86,6 +112,18 @@ ordklasser/
 
 `game.js`, `round.js`, `format.js` and the validation part of `config.js` are
 pure functions so they can be imported both by the browser and by Node tests.
+UI modules export `render(state, config, root)` functions that take a DOM root,
+so they can be unit-tested in jsdom without a browser.
+
+npm scripts:
+
+| Script | Runs |
+|---|---|
+| `npm run validate` | config validator |
+| `npm test` | all unit tests with coverage thresholds |
+| `npm run test:design` | Playwright design verification |
+| `npm run check` | all three, in that order – what CI runs |
+| `npm run serve` | local static server for `site/` |
 
 ---
 
@@ -485,9 +523,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 22 }
-      - run: node scripts/validate-config.mjs
-      - run: node --test tests/
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run validate
+      - run: npm test
+      - run: npm run test:design
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-diff
+          path: test-results/
 
   deploy:
     if: github.event_name != 'pull_request'
@@ -505,7 +551,10 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-- Pull requests run validation and tests only; pushes to `main` also deploy.
+- Pull requests run validation, unit tests and design checks; pushes to
+  `main` also deploy. Nothing deploys unless all three pass.
+- On a design-check failure, the diff images (expected / actual / diff) are
+  uploaded as a workflow artifact so the mismatch can be seen.
 - **One-time manual step:** in the repo's *Settings → Pages*, set *Source* to
   **GitHub Actions**.
 - Site URL: `https://magnusnordin.github.io/ordklasser/`. All asset and config
@@ -517,40 +566,261 @@ jobs:
 
 ---
 
-## 10. Milestones
+## 10. Quality gates: unit tests and design verification
 
-Each milestone is a separate PR with a working deploy.
+Every milestone in section 11 must ship with **(a)** a full unit test suite
+for everything it adds and **(b)** an automated check that what it adds matches
+the design. Both run in CI on every PR; a milestone isn't done and nothing
+deploys until both pass. Checks from earlier milestones keep running, so later
+work can't silently break what was already verified.
 
-1. **Skeleton + deploy** – `site/index.html` placeholder, workflow,
-   validator stub, empty test run. *Done when:* the Pages URL shows the page.
-2. **Config + validation** – the four config files with the full word bank,
-   loader, validator with all rules, tests. *Done when:* a deliberate typo in
-   `words.json` fails CI with a clear message.
-3. **Game logic** – `round.js`, `game.js`, `format.js` with unit tests,
-   including multi-class in both modes. *Done when:* tests cover balanced
-   rounds, any/all mode, inactive classes, timing, best time.
-4. **UI: start + quiz + result (desktop)** – matches the desktop artboards.
-5. **Responsive mobile layout** – matches the mobile artboards at 390 px;
-   no horizontal scroll down to 320 px.
-6. **Multi-class UI** – "also right" outline, examples, "2 ordklasser" badge,
-   result tile marker.
-7. **Polish** – keyboard shortcuts, pause on hidden tab, URL overrides,
-   `prefers-reduced-motion`, accessibility pass (contrast, focus rings,
-   screen-reader texts), README with "how to add words".
+### 10.1 Unit tests
+
+- One test file per source module in `tests/unit/`, written in the same PR as
+  the module.
+- Pure modules (`config`, `round`, `game`, `format`, `storage`) are tested
+  directly. UI modules are tested in `jsdom`: render a state, assert on the
+  DOM (texts, `data-state` attributes, disabled buttons, ARIA attributes) and
+  simulate clicks/keys.
+- Randomness and time are always injected (`rng`, `now`), never read
+  globally, so every test is deterministic.
+- **Coverage is enforced** with Node's built-in coverage:
+  `node --test --experimental-test-coverage --test-coverage-include='site/src/**'
+  --test-coverage-lines=95 --test-coverage-branches=90 --test-coverage-functions=95`.
+  Dropping below fails CI.
+- "Full set" means, for every function: the normal case, each branch, each
+  boundary (min/max values, empty lists, first/last word), and each error
+  path. Each milestone below lists its required cases explicitly.
+
+### 10.2 The design as test data
+
+The design is turned into files in the repo once (milestone 1), so it can be
+checked by machines instead of by eye:
+
+- **`design/source/`** – the canvas's 10 artboards (`Main`, `Quiz`, `Wrong`,
+  `Correct`, `Result` and the 5 `Mobile*` variants) exported as `.dc.html`.
+- **`design/reference/`** – one PNG per artboard at its exact size
+  (1024×768 desktop, 390×844 mobile), rendered by `scripts/capture-design.mjs`
+  in the same headless Chromium that runs the tests, so fonts and
+  anti-aliasing match. (If the design runtime can't be run headless, the PNGs
+  are exported from the canvas instead and the visual tolerance is raised; the
+  spec checks below still hold the exact values.)
+- **`design/spec.json`** – the measurable values per screen and viewport,
+  collected by the capture script from the rendered design and reviewed once:
+  for each key element (title, start button, class cards, timer pill, ruler,
+  word, status line, choice buttons, result time, history tiles, buttons) its
+  bounding box, background, text color, font family/size/weight, border radius
+  and text content.
+
+App elements that correspond to a spec entry carry a matching
+`data-testid` (`start-button`, `choice-verb`, `timer`, `word`, …).
+
+### 10.3 Design fixture mode
+
+The design shows fixed example states. The app gets a fixture mode that
+reproduces them exactly, used only by tests:
+
+`index.html?demo=start|quiz|wrong|correct|result` with the design's demo data:
+round *hund, glad, skriver, springer, äpple, mjuk, sover, fönster, trött,
+bygger*, current word *springer* ("Ord 4 av 10", timer "8,6 s"); wrong state
+has *substantiv* picked; result shows "23,4 s", "Felklick på vägen: 3",
+"Bästa tid: 21,3 s".
+
+Design tests also load a pinned **design fixture config**
+(`tests/fixtures/design-config/`, intercepted by Playwright) with exactly the
+design's three classes, texts and settings. Editing the real word list later
+therefore never breaks a design test.
+
+### 10.4 Design checks (Playwright, `tests/design/`)
+
+| Check | What it does | Tolerance |
+|---|---|---|
+| **Visual** (`visual.spec.mjs`) | Screenshot of each demo state at 1024×768 and 390×844, compared with the matching reference PNG. | ≤ 1 % differing pixels, per-pixel threshold 0.2 |
+| **Spec values** (`spec-values.spec.mjs`) | For each `spec.json` entry: bounding box, computed colors, font, radius and text of the matching `data-testid`. | Position/size ± 2 px; colors, fonts and text exact |
+| **Behavior** (`flow.spec.mjs`) | Plays rounds with a fixed seed and checks the transitions the prototype has: wrong pick → red card, ✕, disabled, status text; right pick → green, ✓, others dimmed, next word after 700 ms; last word → result; "spela igen" / "till start" / "Avsluta". | Exact texts and states |
+| **Accessibility** (`a11y.spec.mjs`) | axe-core on every screen; a keyboard-only round; focus visible. | 0 serious/critical violations |
+| **Responsive** | No horizontal scroll at 320, 360, 390, 720, 1024 and 1440 px wide. | None allowed |
+
+On failure, CI uploads expected / actual / diff images (section 9).
+
+### 10.5 Behavior parity with the prototype
+
+The prototype's game logic lives in `design/source/Main.dc.html`. A unit test
+(`tests/unit/parity.test.mjs`) loads that script in a Node `vm` with a small
+stub for its base class and runs the same inputs through both the prototype
+and our `game.js`/`format.js`: time formatting, ruler ticks and labels
+(every word up to 12, every 5th above), status texts, round balancing, result
+lines and best-time logic. Any difference fails the test.
+
+### 10.6 What has no design yet
+
+The multi-class feature isn't in the design. Before it is built (milestone 6),
+its states are first drawn as new artboards in the Ordklasser canvas, using
+the existing colors and type, and approved by you. After approval they are
+exported into `design/source/` and `design/reference/` like the rest and
+verified the same way.
 
 ---
 
-## 11. Testing
+## 11. Milestones
 
-- **Unit (CI):** round balance and uniqueness; multi-class cap; inactive-class
-  filtering; `PICK` outcomes in both modes; time accumulation excluding the
-  advance pause and hidden time; Swedish formatting (`2,7`, "ett … och ett …",
-  "inget"/"ingen"); best-time keying.
-- **Config (CI):** validator passes on the real config; fails on fixture
-  configs with each error type.
-- **Manual before each UI milestone:** Chrome + Safari on desktop, iOS Safari
-  and Android Chrome on phone; a full round in each mode; keyboard-only round;
-  VoiceOver reads word, status and button states.
+Each milestone is one PR. Each lists its scope, its required unit tests, how
+it is verified against the design, and when it is done.
+
+### Milestone 1 – Skeleton, deploy and test harness
+
+**Scope:** `site/index.html` with the design's background and fonts,
+`tokens.css`, `package.json`, `playwright.config.mjs`, the Pages workflow,
+`design/` (sources, reference PNGs, `spec.json`), `capture-design.mjs`,
+fixture mode stub.
+
+**Unit tests:**
+- `tokens.test.mjs`: every color, font and radius token in `tokens.css`
+  equals the value in `spec.json`.
+- `design-assets.test.mjs`: all 10 reference PNGs exist with the right pixel
+  size; every `spec.json` entry has the required fields; every
+  `design/source` artboard has a reference.
+- Coverage thresholds wired up and passing.
+
+**Design verification:** page background, text color and loaded font
+families match the spec at both viewports; responsive no-scroll check.
+
+**Done when:** the Pages URL shows the page, and CI runs validate → unit →
+design and fails if any of them fail (proven by a deliberately broken commit
+on a test branch).
+
+### Milestone 2 – Configuration and validation
+
+**Scope:** the four config files with the full word bank, `config.js`
+loader/normalizer, `validate-config.mjs`, in-page error message.
+
+**Unit tests (`config.test.mjs`):**
+- Valid config loads; short form `{ "word", "classes": ["x"] }` and long form
+  normalize to the same result.
+- One failing fixture per error rule in section 4.5 (duplicate word,
+  case-insensitive duplicate, unknown class, empty classes, fewer than 2
+  active classes, `wordsPerRound` out of range, too few words, missing
+  placeholder, bad color, invalid JSON) – each asserts the exact message.
+- Each warning rule produces its warning and does not fail.
+- The real config in `site/config/` passes with zero errors.
+- URL overrides: valid values applied, out-of-range values clamped, unknown
+  classes ignored, overrides off when `allowUrlOverrides` is false.
+
+**Design verification:** `content.test.mjs` checks that the design fixture
+config's class names, symbols, hints, descriptions, examples, colors and all
+UI texts are identical to the strings and values in `design/source`. Visual
+check: the in-page config-error message uses design tokens only.
+
+**Done when:** a deliberate typo in `words.json` fails CI with a clear
+message naming the file and word.
+
+### Milestone 3 – Game logic
+
+**Scope:** `round.js`, `game.js`, `format.js`, `storage.js` (no UI).
+
+**Unit tests:**
+- `round.test.mjs`: correct length for every size 3–30; no duplicate words;
+  balanced across classes (each class gets ⌊n/k⌋ or more); remainder handled;
+  multi-class cap respected, including cap 0; no two multi-class words in a
+  row; inactive classes filtered; word with only inactive classes excluded;
+  deterministic with a seeded `rng`; throws a clear error when the pool is too
+  small.
+- `game.test.mjs`: every action in every screen (including invalid ones, which
+  leave state unchanged); `PICK` wrong / right / repeated wrong / pick after
+  solved; time excludes the advance pause; `PAUSE`/`RESUME` excludes hidden
+  time; misses counted; history entries; last word → result; record vs.
+  non-record; `"any"` and `"all"` modes for multi-class words; inactive class
+  in `"all"` mode.
+- `format.test.mjs`: `0 → "0,0"`, rounding (`2649 → "2,6"`, `2650 → "2,7"`),
+  large values; article/negation for "ett" and "en"; Swedish list joining for
+  1, 2 and 3+ items; template filling and missing placeholders.
+- `storage.test.mjs`: key depends on round size, classes (order-independent)
+  and mode; read/write; storage throwing or missing → no crash, returns null.
+- `parity.test.mjs`: section 10.5.
+
+**Design verification:** the parity test (prototype vs. our logic) plus the
+fixture-mode data producing exactly the design's numbers (8,6 s, 23,4 s,
+3 misses, 21,3 s best).
+
+**Done when:** coverage thresholds pass and parity has zero differences.
+
+### Milestone 4 – Desktop UI: start, quiz, result
+
+**Scope:** `ui/start.js`, `ui/quiz.js`, `ui/result.js`, `app.css` for ≥ 720 px.
+
+**Unit tests (jsdom):**
+- `ui-start.test.mjs`: one card per active class with name, example,
+  description and chips; round info text; best time shown only when stored;
+  start button dispatches `START`.
+- `ui-quiz.test.mjs`: word, progress and timer texts; ruler tick count, tall
+  current tick, labels every word / every 5th; each choice button state
+  (neutral, wrong, right, dimmed) via `data-state` and `disabled`; hints
+  shown/hidden by setting; status text and `role="status"`; Avsluta
+  dispatches `QUIT`; advance timer scheduled once and cleared on quit.
+- `ui-result.test.mjs`: total time, result line, misses line (zero and
+  non-zero), record vs. best line vs. none; one history tile per word with
+  correct class tint and missed border; both buttons dispatch the right action.
+
+**Design verification:** visual + spec-values checks for the 5 desktop
+artboards (start, quiz, wrong, correct, result); behavior flow; axe.
+
+**Done when:** all 5 desktop states pass visual (≤ 1 %) and spec (± 2 px)
+checks.
+
+### Milestone 5 – Mobile layout
+
+**Scope:** responsive CSS below 720 px; icon-only Avsluta; short progress
+text.
+
+**Unit tests:** jsdom tests for the mobile-only markup differences (icon-only
+quit button has `aria-label="Avsluta"`, short progress "4 / 10", layout class
+switched by the breakpoint helper).
+
+**Design verification:** visual + spec-values checks for the 5 mobile
+artboards at 390×844; desktop checks still pass; no horizontal scroll at all
+widths in 10.4.
+
+**Done when:** all 10 artboards pass.
+
+### Milestone 6 – Multi-class words in the UI
+
+**Scope:** first, new artboards in the Ordklasser canvas for: correct with
+"also right" outline and example sentences (`any` mode), the "2 ordklasser"
+badge and first-of-two found (`all` mode), and a result tile with the
+multi-class marker – desktop and mobile. After your approval: export to
+`design/`, then build.
+
+**Unit tests:** jsdom tests for every new state and text: "also right"
+outline on the other classes, example sentences per class, badge shown only
+in `all` mode, partial-solve state keeps the timer running, final state lists
+all classes, result tile meta "substantiv/verb · 2,1 s" and marker; longer
+advance delay for multi-class words.
+
+**Design verification:** visual + spec checks for the new approved artboards
+(fixture states `?demo=multi-any`, `multi-all-partial`, `multi-all-done`,
+`multi-result`); all 10 original artboards still pass unchanged.
+
+**Done when:** new and old artboards all pass, and you've approved the new
+artboards.
+
+### Milestone 7 – Polish
+
+**Scope:** keyboard shortcuts, pause on hidden tab, URL overrides in the UI,
+`prefers-reduced-motion`, focus styles, README "how to add words and
+classes".
+
+**Unit tests:** number and letter keys pick the right class, ignored with
+modifiers or outside the quiz; `visibilitychange` dispatches
+`PAUSE`/`RESUME`; overrides reach the round; reduced motion removes
+transitions (class toggled); a 4-class fixture config renders 4 cards and
+4 buttons.
+
+**Design verification:** full suite still passes; focus ring screenshots at
+both viewports; with a 4-class fixture, layout follows the design's spacing
+and colors (spec checks on gaps and radii) and nothing overflows.
+
+**Done when:** full suite green and the README instructions are followed
+once end-to-end to add a word, with CI passing.
 
 ---
 
