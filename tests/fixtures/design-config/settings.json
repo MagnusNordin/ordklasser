@@ -1,0 +1,17 @@
+{
+  "wordsPerRound": 10,
+  "minWordsPerRound": 3,
+  "maxWordsPerRound": 30,
+  "showHints": true,
+  "activeClasses": [
+    "substantiv",
+    "verb",
+    "adjektiv"
+  ],
+  "advanceDelayMs": 700,
+  "multiClass": {
+    "mode": "any",
+    "maxPerRound": 0
+  },
+  "allowUrlOverrides": true
+}

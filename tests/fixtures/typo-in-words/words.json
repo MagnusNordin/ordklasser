@@ -1,0 +1,114 @@
+{
+  "words": [
+    { "word": "hund", "classes": ["substantiv"] },
+    { "word": "katt", "classes": ["substantv"] },
+    { "word": "bil", "classes": ["substantiv"] },
+    { "word": "hus", "classes": ["substantiv"] },
+    { "word": "stol", "classes": ["substantiv"] },
+    { "word": "boll", "classes": ["substantiv"] },
+    { "word": "äpple", "classes": ["substantiv"] },
+    { "word": "fönster", "classes": ["substantiv"] },
+    { "word": "träd", "classes": ["substantiv"] },
+    { "word": "cykel", "classes": ["substantiv"] },
+    { "word": "lampa", "classes": ["substantiv"] },
+    { "word": "gurka", "classes": ["substantiv"] },
+    { "word": "mössa", "classes": ["substantiv"] },
+    { "word": "säng", "classes": ["substantiv"] },
+    { "word": "tröja", "classes": ["substantiv"] },
+    { "word": "banan", "classes": ["substantiv"] },
+    { "word": "penna", "classes": ["substantiv"] },
+    { "word": "fågel", "classes": ["substantiv"] },
+    { "word": "skola", "classes": ["substantiv"] },
+    { "word": "sko", "classes": ["substantiv"] },
+    { "word": "springer", "classes": ["verb"] },
+    { "word": "äter", "classes": ["verb"] },
+    { "word": "sover", "classes": ["verb"] },
+    { "word": "skriver", "classes": ["verb"] },
+    { "word": "läser", "classes": ["verb"] },
+    { "word": "simmar", "classes": ["verb"] },
+    { "word": "sjunger", "classes": ["verb"] },
+    { "word": "hoppar", "classes": ["verb"] },
+    { "word": "skrattar", "classes": ["verb"] },
+    { "word": "dricker", "classes": ["verb"] },
+    { "word": "leker", "classes": ["verb"] },
+    { "word": "bygger", "classes": ["verb"] },
+    { "word": "tänker", "classes": ["verb"] },
+    { "word": "målar", "classes": ["verb"] },
+    { "word": "städar", "classes": ["verb"] },
+    { "word": "dansar", "classes": ["verb"] },
+    { "word": "viskar", "classes": ["verb"] },
+    { "word": "kramar", "classes": ["verb"] },
+    { "word": "letar", "classes": ["verb"] },
+    { "word": "lyssnar", "classes": ["verb"] },
+    { "word": "röd", "classes": ["adjektiv"] },
+    { "word": "stor", "classes": ["adjektiv"] },
+    { "word": "liten", "classes": ["adjektiv"] },
+    { "word": "glad", "classes": ["adjektiv"] },
+    { "word": "snabb", "classes": ["adjektiv"] },
+    { "word": "mjuk", "classes": ["adjektiv"] },
+    { "word": "varm", "classes": ["adjektiv"] },
+    { "word": "trött", "classes": ["adjektiv"] },
+    { "word": "ledsen", "classes": ["adjektiv"] },
+    { "word": "hungrig", "classes": ["adjektiv"] },
+    { "word": "blöt", "classes": ["adjektiv"] },
+    { "word": "tung", "classes": ["adjektiv"] },
+    { "word": "modig", "classes": ["adjektiv"] },
+    { "word": "gammal", "classes": ["adjektiv"] },
+    { "word": "sur", "classes": ["adjektiv"] },
+    { "word": "rolig", "classes": ["adjektiv"] },
+    { "word": "arg", "classes": ["adjektiv"] },
+    { "word": "tyst", "classes": ["adjektiv"] },
+    { "word": "smal", "classes": ["adjektiv"] },
+    { "word": "kall", "classes": ["adjektiv"] },
+    {
+      "word": "bär",
+      "classes": ["substantiv", "verb"],
+      "examples": {"substantiv": "Vi plockar bär i skogen.", "verb": "Hon bär en tung väska."}
+    },
+    {
+      "word": "får",
+      "classes": ["substantiv", "verb"],
+      "examples": {"substantiv": "Bonden har tre får.", "verb": "Jag får en present."}
+    },
+    {
+      "word": "fika",
+      "classes": ["substantiv", "verb"],
+      "examples": {"substantiv": "Vi tar en fika.", "verb": "Ska vi fika?"}
+    },
+    {
+      "word": "vila",
+      "classes": ["substantiv", "verb"],
+      "examples": {"substantiv": "Vi tar en kort vila.", "verb": "Hunden vill vila."}
+    },
+    {
+      "word": "dricka",
+      "classes": ["substantiv", "verb"],
+      "examples": {"substantiv": "Vi köper en dricka.", "verb": "Jag vill dricka vatten."}
+    },
+    {
+      "word": "kort",
+      "classes": ["adjektiv", "substantiv"],
+      "examples": {"adjektiv": "Hon har kort hår.", "substantiv": "Vi spelar kort."}
+    },
+    {
+      "word": "ljus",
+      "classes": ["adjektiv", "substantiv"],
+      "examples": {"adjektiv": "Himlen är ljus.", "substantiv": "Vi tänder ett ljus."}
+    },
+    {
+      "word": "fel",
+      "classes": ["adjektiv", "substantiv"],
+      "examples": {"adjektiv": "Du tog fel buss.", "substantiv": "Jag gjorde ett fel."}
+    },
+    {
+      "word": "rätt",
+      "classes": ["adjektiv", "substantiv"],
+      "examples": {"adjektiv": "Det är rätt svar.", "substantiv": "Kocken lagar en god rätt."}
+    },
+    {
+      "word": "lugn",
+      "classes": ["adjektiv", "substantiv"],
+      "examples": {"adjektiv": "Sjön är lugn.", "substantiv": "Det är ett skönt lugn."}
+    }
+  ]
+}

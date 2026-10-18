@@ -1,0 +1,27 @@
+/* Design tokens from the Ordklasser canvas (checked by tests/unit/tokens.test.mjs). */
+:root {
+  --bg: #F6F4EE;
+  --ink: #17203A;
+  --ink-muted: #4A5168;
+  --ink-soft: #5A6178;
+  --line: #D9D6CC;
+  --line-soft: #E4E1D8;
+  --surface: #FFFFFF;
+  --ruler: #F2C230;
+  --ruler-tick: rgba(23, 32, 58, 0.3);
+  --right: #1E7F4F;
+  --wrong: #B5321F;
+  --wrong-tint: #FCE3DD;
+
+  --font-display: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
+  --font-body: 'Atkinson Hyperlegible', Verdana, sans-serif;
+
+  --radius-pill: 999px;
+  --radius-card: 28px;
+  --radius-card-mobile: 24px;
+  --radius-choice: 28px;
+  --radius-choice-mobile: 22px;
+  --radius-ruler: 8px;
+  --radius-tile: 16px;
+  --radius-tile-mobile: 14px;
+}

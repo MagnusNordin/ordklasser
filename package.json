@@ -1,0 +1,24 @@
+{
+  "name": "ordklasser",
+  "private": true,
+  "type": "module",
+  "description": "Swedish word-class game (substantiv, verb, adjektiv) against the clock.",
+  "scripts": {
+    "validate": "node scripts/validate-config.mjs",
+    "test": "node --test --experimental-test-coverage --test-coverage-include='site/src/**' --test-coverage-lines=95 --test-coverage-branches=90 --test-coverage-functions=95 'tests/unit/*.test.mjs'",
+    "test:design": "playwright test",
+    "capture": "node scripts/capture-design.mjs",
+    "check": "npm run validate && npm test && npm run test:design",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.56.1",
+    "jsdom": "^26.1.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0"
+  }
+}

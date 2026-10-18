@@ -1,0 +1,1932 @@
+{
+  "viewports": {
+    "desktop": {
+      "width": 1024,
+      "height": 768
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "screens": {
+    "desktop": {
+      "start": {
+        "artboard": "Main",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 768
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "ORDKLASSER Vilken ordklass är ordet? Så känner du igen dem. Sedan kör du mot klockan. SUBSTANTIV hund Namn på saker, djur, personer och platser. katt skola äpple VERB äter Något man gör eller något som händer. läser sover bygger ADJEKTIV röd Beskriver hur något är eller ser ut. glad stor mjuk starta 10 ord per runda. Klockan går tills du valt rätt på alla."
+          },
+          "kicker": {
+            "box": {
+              "x": 64,
+              "y": 56,
+              "w": 896,
+              "h": 21
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "ORDKLASSER"
+          },
+          "title": {
+            "box": {
+              "x": 64,
+              "y": 89,
+              "w": 896,
+              "h": 64
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "64px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Vilken ordklass är ordet?"
+          },
+          "subtitle": {
+            "box": {
+              "x": 64,
+              "y": 165,
+              "w": 896,
+              "h": 27
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "Så känner du igen dem. Sedan kör du mot klockan."
+          },
+          "card-substantiv": {
+            "box": {
+              "x": 64,
+              "y": 224,
+              "w": 282.7,
+              "h": 396
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "SUBSTANTIV hund Namn på saker, djur, personer och platser. katt skola äpple"
+          },
+          "card-verb": {
+            "box": {
+              "x": 370.7,
+              "y": 224,
+              "w": 282.7,
+              "h": 396
+            },
+            "background": "rgb(220, 232, 250)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "VERB äter Något man gör eller något som händer. läser sover bygger"
+          },
+          "card-adjektiv": {
+            "box": {
+              "x": 677.3,
+              "y": 224,
+              "w": 282.7,
+              "h": 396
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "ADJEKTIV röd Beskriver hur något är eller ser ut. glad stor mjuk"
+          },
+          "start-button": {
+            "box": {
+              "x": 64,
+              "y": 652,
+              "w": 206,
+              "h": 72
+            },
+            "background": "rgb(23, 32, 58)",
+            "color": "rgb(255, 255, 255)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "30px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "0px rgb(255, 255, 255)",
+            "opacity": "1",
+            "text": "starta"
+          },
+          "round-info": {
+            "box": {
+              "x": 298,
+              "y": 677,
+              "w": 412,
+              "h": 22
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "10 ord per runda. Klockan går tills du valt rätt på alla."
+          }
+        }
+      },
+      "quiz": {
+        "artboard": "Quiz",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 768
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Avsluta 8,6 s Ord 4 av 10 0 1 2 3 5 6 7 8 9 10 VILKEN ORDKLASS? springer Tryck på rätt ordklass. S substantiv saker, djur, personer V verb något man gör A adjektiv hur något är"
+          },
+          "quit-button": {
+            "box": {
+              "x": 48,
+              "y": 32,
+              "w": 128,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(217, 214, 204)",
+            "opacity": "1",
+            "text": "Avsluta"
+          },
+          "timer": {
+            "box": {
+              "x": 441,
+              "y": 32,
+              "w": 142,
+              "h": 44
+            },
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(228, 225, 216)",
+            "opacity": "1",
+            "text": "8,6 s"
+          },
+          "progress": {
+            "box": {
+              "x": 848,
+              "y": 40.5,
+              "w": 128,
+              "h": 27
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Ord 4 av 10"
+          },
+          "ruler": {
+            "box": {
+              "x": 48,
+              "y": 96,
+              "w": 928,
+              "h": 48
+            },
+            "background": "rgb(242, 194, 48)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "8px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "0 1 2 3 5 6 7 8 9 10"
+          },
+          "question": {
+            "box": {
+              "x": 410,
+              "y": 223.3,
+              "w": 204.1,
+              "h": 21
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "VILKEN ORDKLASS?"
+          },
+          "word": {
+            "box": {
+              "x": 275,
+              "y": 266.3,
+              "w": 473.9,
+              "h": 132
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "132px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "springer"
+          },
+          "status": {
+            "box": {
+              "x": 387,
+              "y": 420.3,
+              "w": 250,
+              "h": 32.5
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "Tryck på rätt ordklass."
+          },
+          "choice-substantiv": {
+            "box": {
+              "x": 48,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(138, 66, 14)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(252, 230, 212)",
+            "opacity": "1",
+            "text": "S substantiv saker, djur, personer"
+          },
+          "choice-verb": {
+            "box": {
+              "x": 364,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(220, 232, 250)",
+            "color": "rgb(29, 76, 145)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(220, 232, 250)",
+            "opacity": "1",
+            "text": "V verb något man gör"
+          },
+          "choice-adjektiv": {
+            "box": {
+              "x": 680,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(11, 101, 83)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(211, 241, 234)",
+            "opacity": "1",
+            "text": "A adjektiv hur något är"
+          }
+        }
+      },
+      "wrong": {
+        "artboard": "Wrong",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 768
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Avsluta 8,6 s Ord 4 av 10 0 1 2 3 5 6 7 8 9 10 VILKEN ORDKLASS? springer ”springer” är inget substantiv. Försök igen. substantiv saker, djur, personer V verb något man gör A adjektiv hur något är"
+          },
+          "quit-button": {
+            "box": {
+              "x": 48,
+              "y": 32,
+              "w": 128,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(217, 214, 204)",
+            "opacity": "1",
+            "text": "Avsluta"
+          },
+          "timer": {
+            "box": {
+              "x": 441,
+              "y": 32,
+              "w": 142,
+              "h": 44
+            },
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(228, 225, 216)",
+            "opacity": "1",
+            "text": "8,6 s"
+          },
+          "progress": {
+            "box": {
+              "x": 848,
+              "y": 40.5,
+              "w": 128,
+              "h": 27
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Ord 4 av 10"
+          },
+          "ruler": {
+            "box": {
+              "x": 48,
+              "y": 96,
+              "w": 928,
+              "h": 48
+            },
+            "background": "rgb(242, 194, 48)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "8px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "0 1 2 3 5 6 7 8 9 10"
+          },
+          "question": {
+            "box": {
+              "x": 410,
+              "y": 223.3,
+              "w": 204.1,
+              "h": 21
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "VILKEN ORDKLASS?"
+          },
+          "word": {
+            "box": {
+              "x": 275,
+              "y": 266.3,
+              "w": 473.9,
+              "h": 132
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "132px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "springer"
+          },
+          "status": {
+            "box": {
+              "x": 244,
+              "y": 420.3,
+              "w": 536,
+              "h": 32.5
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(181, 50, 31)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(181, 50, 31)",
+            "opacity": "1",
+            "text": "”springer” är inget substantiv. Försök igen."
+          },
+          "choice-substantiv": {
+            "box": {
+              "x": 48,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(252, 227, 221)",
+            "color": "rgb(181, 50, 31)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(181, 50, 31)",
+            "opacity": "1",
+            "text": "substantiv saker, djur, personer"
+          },
+          "choice-verb": {
+            "box": {
+              "x": 364,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(220, 232, 250)",
+            "color": "rgb(29, 76, 145)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(220, 232, 250)",
+            "opacity": "1",
+            "text": "V verb något man gör"
+          },
+          "choice-adjektiv": {
+            "box": {
+              "x": 680,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(11, 101, 83)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(211, 241, 234)",
+            "opacity": "1",
+            "text": "A adjektiv hur något är"
+          }
+        }
+      },
+      "correct": {
+        "artboard": "Correct",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 768
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Avsluta 8,6 s Ord 4 av 10 0 1 2 3 4 5 6 7 8 9 10 VILKEN ORDKLASS? springer Rätt! ”springer” är ett verb. S substantiv saker, djur, personer verb något man gör A adjektiv hur något är"
+          },
+          "quit-button": {
+            "box": {
+              "x": 48,
+              "y": 32,
+              "w": 128,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(217, 214, 204)",
+            "opacity": "1",
+            "text": "Avsluta"
+          },
+          "timer": {
+            "box": {
+              "x": 441,
+              "y": 32,
+              "w": 142,
+              "h": 44
+            },
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(228, 225, 216)",
+            "opacity": "1",
+            "text": "8,6 s"
+          },
+          "progress": {
+            "box": {
+              "x": 848,
+              "y": 40.5,
+              "w": 128,
+              "h": 27
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Ord 4 av 10"
+          },
+          "ruler": {
+            "box": {
+              "x": 48,
+              "y": 96,
+              "w": 928,
+              "h": 48
+            },
+            "background": "rgb(242, 194, 48)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "8px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "0 1 2 3 4 5 6 7 8 9 10"
+          },
+          "question": {
+            "box": {
+              "x": 410,
+              "y": 223.3,
+              "w": 204.1,
+              "h": 21
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "VILKEN ORDKLASS?"
+          },
+          "word": {
+            "box": {
+              "x": 275,
+              "y": 266.3,
+              "w": 473.9,
+              "h": 132
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(30, 127, 79)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "132px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(30, 127, 79)",
+            "opacity": "1",
+            "text": "springer"
+          },
+          "status": {
+            "box": {
+              "x": 342.5,
+              "y": 420.3,
+              "w": 339,
+              "h": 32.5
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(30, 127, 79)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(30, 127, 79)",
+            "opacity": "1",
+            "text": "Rätt! ”springer” är ett verb."
+          },
+          "choice-substantiv": {
+            "box": {
+              "x": 48,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(138, 66, 14)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(252, 230, 212)",
+            "opacity": "0.4",
+            "text": "S substantiv saker, djur, personer"
+          },
+          "choice-verb": {
+            "box": {
+              "x": 364,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(30, 127, 79)",
+            "color": "rgb(255, 255, 255)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(30, 127, 79)",
+            "opacity": "1",
+            "text": "verb något man gör"
+          },
+          "choice-adjektiv": {
+            "box": {
+              "x": 680,
+              "y": 532,
+              "w": 296,
+              "h": 196
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(11, 101, 83)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "28px",
+            "border": "3px rgb(211, 241, 234)",
+            "opacity": "0.4",
+            "text": "A adjektiv hur något är"
+          }
+        }
+      },
+      "result": {
+        "artboard": "Result",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 768
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "RESULTAT · ORDKLASSER 23,4 s Du klarade 10 ord på 23,4 sekunder. Felklick på vägen: 3 Bästa tid: 21,3 s hund substantiv · 1,9 s glad adjektiv · 2,4 s skriver verb · 1,6 s springer verb · 2,7 s äpple substantiv · 2,0 s mjuk adjektiv · 4,2 s sover verb · 1,8 s fönster substantiv · 2,2 s trött adjektiv · 2,5 s bygger verb · 2,1 s rätt direkt fel först spela igen till start"
+          },
+          "result-kicker": {
+            "box": {
+              "x": 384,
+              "y": 93.7,
+              "w": 256,
+              "h": 21
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "17px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "RESULTAT · ORDKLASSER"
+          },
+          "result-time": {
+            "box": {
+              "x": 326.7,
+              "y": 134.7,
+              "w": 321.1,
+              "h": 151.2
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "168px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "23,4"
+          },
+          "result-line": {
+            "box": {
+              "x": 318.5,
+              "y": 305.9,
+              "w": 387,
+              "h": 30
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "24px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Du klarade 10 ord på 23,4 sekunder."
+          },
+          "miss-line": {
+            "box": {
+              "x": 353,
+              "y": 355.9,
+              "w": 155,
+              "h": 22
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "Felklick på vägen: 3"
+          },
+          "best-line": {
+            "box": {
+              "x": 532,
+              "y": 355.9,
+              "w": 139,
+              "h": 22
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Bästa tid: 21,3 s"
+          },
+          "history": {
+            "box": {
+              "x": 72,
+              "y": 397.9,
+              "w": 880,
+              "h": 140.4
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "hund substantiv · 1,9 s glad adjektiv · 2,4 s skriver verb · 1,6 s springer verb · 2,7 s äpple substantiv · 2,0 s mjuk adjektiv · 4,2 s sover verb · 1,8 s fönster substantiv · 2,2 s trött adjektiv · 2,5 s bygger verb · 2,1 s"
+          },
+          "tile-0": {
+            "box": {
+              "x": 72,
+              "y": 397.9,
+              "w": 168,
+              "h": 65.2
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "16px",
+            "border": "3px rgb(252, 230, 212)",
+            "opacity": "1",
+            "text": "hund substantiv · 1,9 s"
+          },
+          "tile-1": {
+            "box": {
+              "x": 250,
+              "y": 397.9,
+              "w": 168,
+              "h": 65.2
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "16px",
+            "border": "3px rgb(181, 50, 31)",
+            "opacity": "1",
+            "text": "glad adjektiv · 2,4 s"
+          },
+          "legend": {
+            "box": {
+              "x": 415.5,
+              "y": 558.3,
+              "w": 193,
+              "h": 20
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "rätt direkt fel först"
+          },
+          "play-again": {
+            "box": {
+              "x": 287.5,
+              "y": 602.3,
+              "w": 233,
+              "h": 72
+            },
+            "background": "rgb(23, 32, 58)",
+            "color": "rgb(255, 255, 255)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "30px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "0px rgb(255, 255, 255)",
+            "opacity": "1",
+            "text": "spela igen"
+          },
+          "to-start": {
+            "box": {
+              "x": 536.5,
+              "y": 602.3,
+              "w": 200,
+              "h": 72
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "30px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "3px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "till start"
+          }
+        }
+      }
+    },
+    "mobile": {
+      "start": {
+        "artboard": "MobileMain",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 844
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "ORDKLASSER Vilken ordklass är ordet? Så känner du igen dem. Sedan kör du mot klockan. hund SUBSTANTIV Namn på saker, djur, personer och platser. katt skola äpple äter VERB Något man gör eller något som händer. läser sover bygger röd ADJEKTIV Beskriver hur något är eller ser ut. glad stor mjuk starta 10 ord per runda. Klockan går tills du valt rätt på alla."
+          },
+          "kicker": {
+            "box": {
+              "x": 20,
+              "y": 40,
+              "w": 350,
+              "h": 18
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "ORDKLASSER"
+          },
+          "title": {
+            "box": {
+              "x": 20,
+              "y": 68,
+              "w": 350,
+              "h": 81.6
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "40px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Vilken ordklass är ordet?"
+          },
+          "subtitle": {
+            "box": {
+              "x": 20,
+              "y": 159.6,
+              "w": 350,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "Så känner du igen dem. Sedan kör du mot klockan."
+          },
+          "card-substantiv": {
+            "box": {
+              "x": 20,
+              "y": 225.6,
+              "w": 350,
+              "h": 150.8
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "24px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "hund SUBSTANTIV Namn på saker, djur, personer och platser. katt skola äpple"
+          },
+          "card-verb": {
+            "box": {
+              "x": 20,
+              "y": 388.4,
+              "w": 350,
+              "h": 150.8
+            },
+            "background": "rgb(220, 232, 250)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "24px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "äter VERB Något man gör eller något som händer. läser sover bygger"
+          },
+          "card-adjektiv": {
+            "box": {
+              "x": 20,
+              "y": 551.2,
+              "w": 350,
+              "h": 150.8
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "24px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "röd ADJEKTIV Beskriver hur något är eller ser ut. glad stor mjuk"
+          },
+          "start-button": {
+            "box": {
+              "x": 20,
+              "y": 724,
+              "w": 350,
+              "h": 64
+            },
+            "background": "rgb(23, 32, 58)",
+            "color": "rgb(255, 255, 255)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "26px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "0px rgb(255, 255, 255)",
+            "opacity": "1",
+            "text": "starta"
+          },
+          "round-info": {
+            "box": {
+              "x": 20,
+              "y": 798,
+              "w": 350,
+              "h": 18
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "10 ord per runda. Klockan går tills du valt rätt på alla."
+          }
+        }
+      },
+      "quiz": {
+        "artboard": "MobileQuiz",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 844
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "8,6 s 4 / 10 0 1 2 3 5 6 7 8 9 10 VILKEN ORDKLASS? springer Tryck på rätt ordklass. S substantiv saker, djur, personer V verb något man gör A adjektiv hur något är"
+          },
+          "quit-button": {
+            "box": {
+              "x": 20,
+              "y": 20,
+              "w": 44,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "border": "2px rgb(217, 214, 204)",
+            "opacity": "1",
+            "text": ""
+          },
+          "timer": {
+            "box": {
+              "x": 130.5,
+              "y": 20,
+              "w": 122,
+              "h": 44
+            },
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(228, 225, 216)",
+            "opacity": "1",
+            "text": "8,6 s"
+          },
+          "progress": {
+            "box": {
+              "x": 319,
+              "y": 31,
+              "w": 51,
+              "h": 22
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "4 / 10"
+          },
+          "ruler": {
+            "box": {
+              "x": 20,
+              "y": 80,
+              "w": 350,
+              "h": 44
+            },
+            "background": "rgb(242, 194, 48)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "8px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "0 1 2 3 5 6 7 8 9 10"
+          },
+          "question": {
+            "box": {
+              "x": 110.3,
+              "y": 245.5,
+              "w": 169.4,
+              "h": 17
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "VILKEN ORDKLASS?"
+          },
+          "word": {
+            "box": {
+              "x": 54.6,
+              "y": 278.5,
+              "w": 280.8,
+              "h": 76
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "76px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "springer"
+          },
+          "status": {
+            "box": {
+              "x": 105,
+              "y": 370.5,
+              "w": 180,
+              "h": 48
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "Tryck på rätt ordklass."
+          },
+          "choice-substantiv": {
+            "box": {
+              "x": 20,
+              "y": 540,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(138, 66, 14)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(252, 230, 212)",
+            "opacity": "1",
+            "text": "S substantiv saker, djur, personer"
+          },
+          "choice-verb": {
+            "box": {
+              "x": 20,
+              "y": 636,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(220, 232, 250)",
+            "color": "rgb(29, 76, 145)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(220, 232, 250)",
+            "opacity": "1",
+            "text": "V verb något man gör"
+          },
+          "choice-adjektiv": {
+            "box": {
+              "x": 20,
+              "y": 732,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(11, 101, 83)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(211, 241, 234)",
+            "opacity": "1",
+            "text": "A adjektiv hur något är"
+          }
+        }
+      },
+      "wrong": {
+        "artboard": "MobileWrong",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 844
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "8,6 s 4 / 10 0 1 2 3 5 6 7 8 9 10 VILKEN ORDKLASS? springer ”springer” är inget substantiv. Försök igen. substantiv saker, djur, personer V verb något man gör A adjektiv hur något är"
+          },
+          "quit-button": {
+            "box": {
+              "x": 20,
+              "y": 20,
+              "w": 44,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "border": "2px rgb(217, 214, 204)",
+            "opacity": "1",
+            "text": ""
+          },
+          "timer": {
+            "box": {
+              "x": 130.5,
+              "y": 20,
+              "w": 122,
+              "h": 44
+            },
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(228, 225, 216)",
+            "opacity": "1",
+            "text": "8,6 s"
+          },
+          "progress": {
+            "box": {
+              "x": 319,
+              "y": 31,
+              "w": 51,
+              "h": 22
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "4 / 10"
+          },
+          "ruler": {
+            "box": {
+              "x": 20,
+              "y": 80,
+              "w": 350,
+              "h": 44
+            },
+            "background": "rgb(242, 194, 48)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "8px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "0 1 2 3 5 6 7 8 9 10"
+          },
+          "question": {
+            "box": {
+              "x": 110.3,
+              "y": 245.5,
+              "w": 169.4,
+              "h": 17
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "VILKEN ORDKLASS?"
+          },
+          "word": {
+            "box": {
+              "x": 54.6,
+              "y": 278.5,
+              "w": 280.8,
+              "h": 76
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "76px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "springer"
+          },
+          "status": {
+            "box": {
+              "x": 20,
+              "y": 370.5,
+              "w": 350,
+              "h": 48
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(181, 50, 31)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(181, 50, 31)",
+            "opacity": "1",
+            "text": "”springer” är inget substantiv. Försök igen."
+          },
+          "choice-substantiv": {
+            "box": {
+              "x": 20,
+              "y": 540,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(252, 227, 221)",
+            "color": "rgb(181, 50, 31)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(181, 50, 31)",
+            "opacity": "1",
+            "text": "substantiv saker, djur, personer"
+          },
+          "choice-verb": {
+            "box": {
+              "x": 20,
+              "y": 636,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(220, 232, 250)",
+            "color": "rgb(29, 76, 145)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(220, 232, 250)",
+            "opacity": "1",
+            "text": "V verb något man gör"
+          },
+          "choice-adjektiv": {
+            "box": {
+              "x": 20,
+              "y": 732,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(11, 101, 83)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(211, 241, 234)",
+            "opacity": "1",
+            "text": "A adjektiv hur något är"
+          }
+        }
+      },
+      "correct": {
+        "artboard": "MobileCorrect",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 844
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "8,6 s 4 / 10 0 1 2 3 4 5 6 7 8 9 10 VILKEN ORDKLASS? springer Rätt! ”springer” är ett verb. S substantiv saker, djur, personer verb något man gör A adjektiv hur något är"
+          },
+          "quit-button": {
+            "box": {
+              "x": 20,
+              "y": 20,
+              "w": 44,
+              "h": 44
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "border": "2px rgb(217, 214, 204)",
+            "opacity": "1",
+            "text": ""
+          },
+          "timer": {
+            "box": {
+              "x": 130.5,
+              "y": 20,
+              "w": 122,
+              "h": 44
+            },
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "2px rgb(228, 225, 216)",
+            "opacity": "1",
+            "text": "8,6 s"
+          },
+          "progress": {
+            "box": {
+              "x": 319,
+              "y": 31,
+              "w": 51,
+              "h": 22
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "4 / 10"
+          },
+          "ruler": {
+            "box": {
+              "x": 20,
+              "y": 80,
+              "w": 350,
+              "h": 44
+            },
+            "background": "rgb(242, 194, 48)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "8px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "0 1 2 3 4 5 6 7 8 9 10"
+          },
+          "question": {
+            "box": {
+              "x": 110.3,
+              "y": 245.5,
+              "w": 169.4,
+              "h": 17
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "VILKEN ORDKLASS?"
+          },
+          "word": {
+            "box": {
+              "x": 54.6,
+              "y": 278.5,
+              "w": 280.8,
+              "h": 76
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(30, 127, 79)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "76px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(30, 127, 79)",
+            "opacity": "1",
+            "text": "springer"
+          },
+          "status": {
+            "box": {
+              "x": 73,
+              "y": 370.5,
+              "w": 244,
+              "h": 48
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(30, 127, 79)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(30, 127, 79)",
+            "opacity": "1",
+            "text": "Rätt! ”springer” är ett verb."
+          },
+          "choice-substantiv": {
+            "box": {
+              "x": 20,
+              "y": 540,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(138, 66, 14)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(252, 230, 212)",
+            "opacity": "0.4",
+            "text": "S substantiv saker, djur, personer"
+          },
+          "choice-verb": {
+            "box": {
+              "x": 20,
+              "y": 636,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(30, 127, 79)",
+            "color": "rgb(255, 255, 255)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(30, 127, 79)",
+            "opacity": "1",
+            "text": "verb något man gör"
+          },
+          "choice-adjektiv": {
+            "box": {
+              "x": 20,
+              "y": 732,
+              "w": 350,
+              "h": 84
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(11, 101, 83)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "22px",
+            "border": "3px rgb(211, 241, 234)",
+            "opacity": "0.4",
+            "text": "A adjektiv hur något är"
+          }
+        }
+      },
+      "result": {
+        "artboard": "MobileResult",
+        "elements": {
+          "app": {
+            "box": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 844
+            },
+            "background": "rgb(246, 244, 238)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "RESULTAT · ORDKLASSER 23,4 s Du klarade 10 ord på 23,4 sekunder. Felklick på vägen: 3 Bästa tid: 21,3 s hund substantiv · 1,9 s glad adjektiv · 2,4 s skriver verb · 1,6 s springer verb · 2,7 s äpple substantiv · 2,0 s mjuk adjektiv · 4,2 s sover verb · 1,8 s fönster substantiv · 2,2 s trött adjektiv · 2,5 s bygger verb · 2,1 s rätt direkt fel först spela igen till start"
+          },
+          "result-kicker": {
+            "box": {
+              "x": 81.9,
+              "y": 68.2,
+              "w": 226.1,
+              "h": 18
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "RESULTAT · ORDKLASSER"
+          },
+          "result-time": {
+            "box": {
+              "x": 79.2,
+              "y": 100.2,
+              "w": 198.1,
+              "h": 93.6
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "104px",
+            "fontWeight": "800",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "23,4"
+          },
+          "result-line": {
+            "box": {
+              "x": 46,
+              "y": 207.8,
+              "w": 298,
+              "h": 24
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "19px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Du klarade 10 ord på 23,4 sekunder."
+          },
+          "miss-line": {
+            "box": {
+              "x": 130.5,
+              "y": 245.8,
+              "w": 129,
+              "h": 18
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "Felklick på vägen: 3"
+          },
+          "best-line": {
+            "box": {
+              "x": 137,
+              "y": 267.8,
+              "w": 116,
+              "h": 18
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "700",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "Bästa tid: 21,3 s"
+          },
+          "history": {
+            "box": {
+              "x": 20,
+              "y": 299.8,
+              "w": 350,
+              "h": 311
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "hund substantiv · 1,9 s glad adjektiv · 2,4 s skriver verb · 1,6 s springer verb · 2,7 s äpple substantiv · 2,0 s mjuk adjektiv · 4,2 s sover verb · 1,8 s fönster substantiv · 2,2 s trött adjektiv · 2,5 s bygger verb · 2,1 s"
+          },
+          "tile-0": {
+            "box": {
+              "x": 20,
+              "y": 299.8,
+              "w": 171,
+              "h": 55.8
+            },
+            "background": "rgb(252, 230, 212)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "14px",
+            "border": "3px rgb(252, 230, 212)",
+            "opacity": "1",
+            "text": "hund substantiv · 1,9 s"
+          },
+          "tile-1": {
+            "box": {
+              "x": 199,
+              "y": 299.8,
+              "w": 171,
+              "h": 55.8
+            },
+            "background": "rgb(211, 241, 234)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "14px",
+            "border": "3px rgb(181, 50, 31)",
+            "opacity": "1",
+            "text": "glad adjektiv · 2,4 s"
+          },
+          "legend": {
+            "box": {
+              "x": 107.5,
+              "y": 624.8,
+              "w": 175,
+              "h": 17
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(74, 81, 104)",
+            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "radius": "0px",
+            "border": "0px rgb(74, 81, 104)",
+            "opacity": "1",
+            "text": "rätt direkt fel först"
+          },
+          "play-again": {
+            "box": {
+              "x": 20,
+              "y": 694,
+              "w": 350,
+              "h": 60
+            },
+            "background": "rgb(23, 32, 58)",
+            "color": "rgb(255, 255, 255)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "0px rgb(255, 255, 255)",
+            "opacity": "1",
+            "text": "spela igen"
+          },
+          "to-start": {
+            "box": {
+              "x": 20,
+              "y": 764,
+              "w": 350,
+              "h": 52
+            },
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(23, 32, 58)",
+            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "fontWeight": "700",
+            "radius": "999px",
+            "border": "3px rgb(23, 32, 58)",
+            "opacity": "1",
+            "text": "till start"
+          }
+        }
+      }
+    }
+  },
+  "tokens": {
+    "colors": {
+      "bg": "rgb(246, 244, 238)",
+      "ink": "rgb(23, 32, 58)",
+      "inkMuted": "rgb(74, 81, 104)",
+      "line": "rgb(217, 214, 204)",
+      "lineSoft": "rgb(228, 225, 216)",
+      "surface": "rgb(255, 255, 255)",
+      "ruler": "rgb(242, 194, 48)",
+      "right": "rgb(30, 127, 79)",
+      "wrong": "rgb(181, 50, 31)",
+      "wrongTint": "rgb(252, 227, 221)"
+    },
+    "fonts": {
+      "display": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+      "body": "\"Atkinson Hyperlegible\", Verdana, sans-serif"
+    },
+    "radii": {
+      "pill": "999px",
+      "card": "28px",
+      "cardMobile": "24px",
+      "choice": "28px",
+      "choiceMobile": "22px",
+      "ruler": "8px",
+      "tile": "16px",
+      "tileMobile": "14px"
+    }
+  }
+}

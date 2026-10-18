@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="version" content="dev">
+<title>Ordklasser</title>
+<meta name="description" content="Vilken ordklass är ordet? Substantiv, verb eller adjektiv – mot klockan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+<link rel="stylesheet" href="./styles/tokens.css">
+<link rel="stylesheet" href="./styles/app.css">
+<script type="module">
+  import { boot } from './src/main.js';
+  boot(window);
+</script>
+</head>
+<body>
+<main id="app" class="app" data-testid="app"></main>
+<noscript><p class="noscript">Ordklasser behöver JavaScript.</p></noscript>
+</body>
+</html>

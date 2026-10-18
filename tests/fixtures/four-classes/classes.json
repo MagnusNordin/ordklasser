@@ -1,0 +1,74 @@
+[
+  {
+    "key": "substantiv",
+    "name": "substantiv",
+    "article": "ett",
+    "symbol": "S",
+    "hint": "saker, djur, personer",
+    "description": "Namn på saker, djur, personer och platser.",
+    "example": "hund",
+    "moreExamples": [
+      "katt",
+      "skola",
+      "äpple"
+    ],
+    "colors": {
+      "tint": "#FCE6D4",
+      "deep": "#8A420E"
+    }
+  },
+  {
+    "key": "verb",
+    "name": "verb",
+    "article": "ett",
+    "symbol": "V",
+    "hint": "något man gör",
+    "description": "Något man gör eller något som händer.",
+    "example": "äter",
+    "moreExamples": [
+      "läser",
+      "sover",
+      "bygger"
+    ],
+    "colors": {
+      "tint": "#DCE8FA",
+      "deep": "#1D4C91"
+    }
+  },
+  {
+    "key": "adjektiv",
+    "name": "adjektiv",
+    "article": "ett",
+    "symbol": "A",
+    "hint": "hur något är",
+    "description": "Beskriver hur något är eller ser ut.",
+    "example": "röd",
+    "moreExamples": [
+      "glad",
+      "stor",
+      "mjuk"
+    ],
+    "colors": {
+      "tint": "#D3F1EA",
+      "deep": "#0B6553"
+    }
+  },
+  {
+    "key": "pronomen",
+    "name": "pronomen",
+    "article": "ett",
+    "symbol": "P",
+    "hint": "ersätter ett namn",
+    "description": "Ord som står i stället för ett substantiv.",
+    "example": "hon",
+    "moreExamples": [
+      "jag",
+      "vi",
+      "den"
+    ],
+    "colors": {
+      "tint": "#EDE3F7",
+      "deep": "#5B2A86"
+    }
+  }
+]

@@ -1,0 +1,364 @@
+{
+  "words": [
+    {
+      "word": "hund",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "katt",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "bil",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "hus",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "stol",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "boll",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "äpple",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "fönster",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "träd",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "cykel",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "lampa",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "gurka",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "mössa",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "säng",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "tröja",
+      "classes": [
+        "substantiv"
+      ]
+    },
+    {
+      "word": "springer",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "äter",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "sover",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "skriver",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "läser",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "simmar",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "sjunger",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "hoppar",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "skrattar",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "dricker",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "leker",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "bygger",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "tänker",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "målar",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "städar",
+      "classes": [
+        "verb"
+      ]
+    },
+    {
+      "word": "röd",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "stor",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "liten",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "glad",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "snabb",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "mjuk",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "kall",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "varm",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "trött",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "ledsen",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "hungrig",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "blöt",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "tung",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "modig",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "gammal",
+      "classes": [
+        "adjektiv"
+      ]
+    },
+    {
+      "word": "jag",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "du",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "han",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "hon",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "den",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "det",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "vi",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "ni",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "de",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "mig",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "dig",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "honom",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "henne",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "oss",
+      "classes": [
+        "pronomen"
+      ]
+    },
+    {
+      "word": "er",
+      "classes": [
+        "pronomen"
+      ]
+    }
+  ]
+}
