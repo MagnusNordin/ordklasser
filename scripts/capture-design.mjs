@@ -4,15 +4,12 @@
 //
 //   node scripts/capture-design.mjs
 import { chromium } from '@playwright/test';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { VIEWPORTS, STATES, ARTBOARDS, TARGETS, designSource, measureElement, locateInDesign } from './spec-targets.mjs';
+import { VIEWPORTS, STATES, ARTBOARDS, TARGETS, measureElement, locateInDesign } from './spec-targets.mjs';
+import { openDesign } from './render-design.mjs';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const renderer = await readFile(ROOT + 'scripts/dc-render.js', 'utf8');
-
-const shell = `<!doctype html><html lang="sv"><head><meta charset="utf-8">
-<style>body{margin:0}</style><script>${renderer}</script></head><body><div id="mount"></div></body></html>`;
 
 const browser = await chromium.launch();
 const spec = { viewports: VIEWPORTS, screens: {}, tokens: {} };
@@ -21,18 +18,8 @@ await mkdir(ROOT + 'design/reference', { recursive: true });
 for (const [vp, size] of Object.entries(VIEWPORTS)) {
   spec.screens[vp] = {};
   for (const state of STATES) {
-    const { file, screen } = designSource(vp, state);
-    const source = await readFile(`${ROOT}design/source/${file}.dc.html`, 'utf8');
     const page = await browser.newPage({ viewport: size, deviceScaleFactor: 1 });
-    await page.setContent(shell);
-    await page.evaluate(([src, screen]) => {
-      window.renderDC(src, document.getElementById('mount'), { screen });
-    }, [source, screen]);
-    await page.waitForLoadState('networkidle');
-    await page.evaluate(async () => {
-      await document.fonts.ready;
-      await Promise.all(Array.from(document.fonts).map((f) => f.load().catch(() => null)));
-    });
+    await openDesign(page, vp, state);
     const names = TARGETS[state];
     const elements = await page.evaluate(
       ([names, locate, measure]) => {
