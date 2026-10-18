@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { fill, formatTime, joinList, negation, placeholders, withArticle } from '../../site/src/format.js';
+import { fill, formatTime, joinList, negation, placeholders, splitExample, withArticle } from '../../site/src/format.js';
 
 test('formatTime: tenths of a second with a comma', () => {
   assert.equal(formatTime(0), '0,0');
@@ -38,4 +38,15 @@ test('fill replaces placeholders and throws on a missing value', () => {
   assert.equal(fill('Ord {i} av {n}', { i: 4, n: 10 }), 'Ord 4 av 10');
   assert.equal(fill('{a}{a}', { a: 0 }), '00');
   assert.throws(() => fill('Ord {i} av {n}', { i: 1 }), /Saknar värde för \{n\}/);
+});
+
+test('splitExample finds the whole word, ignoring case', () => {
+  assert.deepEqual(splitExample('Hon har kort hår.', 'kort'), { before: 'Hon har ', word: 'kort', after: ' hår.' });
+  assert.deepEqual(splitExample('Vi spelar kort.', 'kort'), { before: 'Vi spelar ', word: 'kort', after: '.' });
+  assert.deepEqual(splitExample('Kort är bra.', 'kort'), { before: '', word: 'Kort', after: ' är bra.' });
+  assert.deepEqual(splitExample('Ska vi fika?', 'fika'), { before: 'Ska vi ', word: 'fika', after: '?' });
+  assert.deepEqual(splitExample('Bär, bär och bär.', 'bär'), { before: '', word: 'Bär', after: ', bär och bär.' });
+  assert.deepEqual(splitExample('Vi spelar kortspel.', 'kort'), { before: 'Vi spelar kortspel.', word: '', after: '' });
+  assert.deepEqual(splitExample('Han är (x) här.', '(x)'), { before: 'Han är ', word: '(x)', after: ' här.' });
+  assert.deepEqual(splitExample('Jag får en present.', 'får'), { before: 'Jag ', word: 'får', after: ' en present.' });
 });

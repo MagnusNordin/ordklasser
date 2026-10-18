@@ -68,3 +68,23 @@ test('legend and both buttons dispatch the right action', () => {
   click(T(root, 'to-start'));
   assert.deepEqual(calls, ['AGAIN', 'DONE']);
 });
+
+test('multi-class tile marker: dots in the first-picked class, then the other', () => {
+  const { root } = setup(demoState('multi-result'));
+  const marker = T(root, 'tile-marker-6');
+  assert.equal(marker.getAttribute('aria-hidden'), 'true');
+  assert.deepEqual([...marker.querySelectorAll('.dot')].map((d) => d.getAttribute('style')), ['--dot:#8A420E', '--dot:#1D4C91']);
+  assert.equal(T(root, 'tile-6').querySelector('.tile-meta').textContent, 'substantiv/verb · 2,1 s');
+  assert.equal(T(root, 'tile-0').querySelector('.tile-marker'), null);
+  const legend = T(root, 'legend-multi');
+  assert.equal(legend.textContent, 'flera ordklasser');
+  assert.equal(legend.querySelectorAll('.dot').length, 2);
+  const picked = { ...demoState('multi-result') };
+  picked.history = picked.history.map((h, i) => (i === 6 ? { ...h, first: 'verb' } : h));
+  const flipped = setup(picked).root;
+  assert.deepEqual([...T(flipped, 'tile-marker-6').querySelectorAll('.dot')].map((d) => d.getAttribute('style')), ['--dot:#1D4C91', '--dot:#8A420E']);
+});
+
+test('no multi-class word → no multi legend item', () => {
+  assert.equal(T(setup(demoState('result')).root, 'legend-multi'), null);
+});

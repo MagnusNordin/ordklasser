@@ -1,16 +1,17 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { DEMO_SCREENS, demoState } from '../../site/src/demo.js';
-import { bestLine, elapsedMs, missLine } from '../../site/src/game.js';
+import { bestLine, choiceState, elapsedMs, exampleLines, missLine, showBadge, statusLine } from '../../site/src/game.js';
 import { formatTime } from '../../site/src/format.js';
 import { MOBILE_QUERY, REDUCED_MOTION_QUERY, matches, watch } from '../../site/src/layout.js';
 import { classVars, esc, fitText } from '../../site/src/ui/dom.js';
 import { makeDom, realConfig } from './helpers.mjs';
 
-const { texts } = realConfig();
+const { texts, classMap } = realConfig();
 
 test('fixture states reproduce the design numbers', () => {
-  assert.deepEqual(DEMO_SCREENS, ['start', 'quiz', 'wrong', 'correct', 'result']);
+  assert.deepEqual(DEMO_SCREENS, ['start', 'quiz', 'wrong', 'correct', 'result',
+    'multi-any', 'multi-all-partial', 'multi-all-done', 'multi-result']);
   assert.equal(demoState('nope'), null);
   assert.equal(demoState(null), null);
   assert.deepEqual(demoState('start'), { screen: 'start', best: null });
@@ -29,6 +30,29 @@ test('fixture states reproduce the design numbers', () => {
   assert.equal(formatTime(result.totalMs), '23,4');
   assert.equal(missLine(result, texts), 'Felklick på vägen: 3');
   assert.equal(bestLine(result, texts).text, 'Bästa tid: 21,3 s');
+});
+
+test('multi-class fixture states reproduce the approved artboards', () => {
+  const any = demoState('multi-any');
+  assert.equal(any.round[any.index].word, 'kort');
+  assert.equal(formatTime(elapsedMs(any, 0)), '8,6');
+  assert.equal(statusLine(any, classMap, texts).text, 'Rätt! ”kort” är ett adjektiv – men kan också vara ett substantiv.');
+  assert.deepEqual(['substantiv', 'verb', 'adjektiv'].map((k) => choiceState(any, k)), ['also', 'dimmed', 'right']);
+  assert.deepEqual(exampleLines(any).map((e) => e.key), ['adjektiv', 'substantiv']);
+  assert.equal(showBadge(any), false);
+  const partial = demoState('multi-all-partial');
+  assert.equal(formatTime(elapsedMs(partial, 999)), '7,8');
+  assert.equal(showBadge(partial), true);
+  assert.equal(statusLine(partial, classMap, texts).text, 'Rätt! ”bär” är ett verb. Det finns en ordklass till – hitta den!');
+  const done = demoState('multi-all-done');
+  assert.equal(statusLine(done, classMap, texts).text, 'Rätt! ”bär” kan vara både ett substantiv och ett verb.');
+  assert.equal(formatTime(elapsedMs(done, 0)), '8,6');
+  assert.deepEqual(exampleLines(done), []);
+  const result = demoState('multi-result');
+  assert.equal(result.screen, 'result');
+  assert.equal(formatTime(result.totalMs), '23,7');
+  assert.deepEqual(result.history[6], { word: 'bär', classes: ['substantiv', 'verb'], first: 'substantiv', ms: 2100, miss: false });
+  assert.equal(demoState('multi-result', 4).history[3].word, 'bär', 'clamped into short rounds');
 });
 
 test('fixture states scale to other round sizes', () => {

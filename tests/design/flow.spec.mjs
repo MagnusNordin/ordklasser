@@ -119,3 +119,38 @@ test('timer counts up while a word is unsolved and survives a hidden tab', async
   const secs = Number(t2.replace(' s', '').replace(',', '.'));
   expect(secs).toBeLessThan(0.9);
 });
+
+test('multi-class words in "all" mode: badge, partial find, then solved with every class', async ({ page }) => {
+  // The real word bank (it has multi-class words); answers come from it too.
+  const real = Object.fromEntries(JSON.parse(readFileSync(`${ROOT}site/config/words.json`, 'utf8')).words.map((w) => [w.word, w.classes]));
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await page.goto('./?seed=4&lage=all');
+  await page.getByTestId('start-button').click();
+  let sawMulti = false;
+  for (let i = 1; i <= 10; i++) {
+    await expect(page.getByTestId('progress')).toHaveText(`Ord ${i} av 10`);
+    const word = (await page.getByTestId('word').textContent()).trim();
+    const classes = real[word];
+    if (classes.length > 1) {
+      sawMulti = true;
+      await expect(page.getByTestId('badge')).toHaveText(`${classes.length} ordklasser`);
+      await page.getByTestId(`choice-${classes[0]}`).click();
+      await expect(page.getByTestId(`choice-${classes[0]}`)).toHaveAttribute('data-state', 'right');
+      await expect(page.getByTestId('status')).toContainText('Det finns en ordklass till');
+      await expect(page.getByTestId('word')).not.toHaveAttribute('data-solved', '');
+      const t1 = await page.locator('.timer-value').textContent();
+      await page.waitForTimeout(300);
+      expect(await page.locator('.timer-value').textContent()).not.toBe(t1);
+      await page.getByTestId(`choice-${classes[1]}`).click();
+      await expect(page.getByTestId('status')).toContainText('kan vara både');
+      await expect(page.locator('.example')).toHaveCount(2);
+    } else {
+      await expect(page.getByTestId('badge')).toHaveCount(0);
+      await page.getByTestId(`choice-${classes[0]}`).click();
+    }
+  }
+  expect(sawMulti).toBe(true);
+  await expect(page.getByTestId('result-line')).toBeVisible();
+  await expect(page.locator('.tile-marker')).toHaveCount(2);
+  await expect(page.getByTestId('legend-multi')).toHaveText('flera ordklasser');
+});

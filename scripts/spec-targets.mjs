@@ -6,13 +6,23 @@ export const VIEWPORTS = {
   mobile: { width: 390, height: 844 }
 };
 
-// Fixture states in the order of the canvas's artboards.
-export const STATES = ['start', 'quiz', 'wrong', 'correct', 'result'];
+// Fixture states (?demo=…) in the order of the canvas's artboards.
+export const STATES = ['start', 'quiz', 'wrong', 'correct', 'result',
+  'multi-any', 'multi-all-partial', 'multi-all-done', 'multi-result'];
 
 export const ARTBOARDS = {
-  desktop: { start: 'Main', quiz: 'Quiz', wrong: 'Wrong', correct: 'Correct', result: 'Result' },
-  mobile: { start: 'MobileMain', quiz: 'MobileQuiz', wrong: 'MobileWrong', correct: 'MobileCorrect', result: 'MobileResult' }
+  desktop: { start: 'Main', quiz: 'Quiz', wrong: 'Wrong', correct: 'Correct', result: 'Result',
+    'multi-any': 'Multi', 'multi-all-partial': 'MultiPartial', 'multi-all-done': 'MultiDone', 'multi-result': 'MultiResult' },
+  mobile: { start: 'MobileMain', quiz: 'MobileQuiz', wrong: 'MobileWrong', correct: 'MobileCorrect', result: 'MobileResult',
+    'multi-any': 'MobileMulti', 'multi-all-partial': 'MobileMultiPartial', 'multi-all-done': 'MobileMultiDone', 'multi-result': 'MobileMultiResult' }
 };
+
+// Which component artboard renders a state, and with which `screen` prop.
+export function designSource(viewport, state) {
+  const mobile = viewport === 'mobile' ? 'Mobile' : '';
+  if (state.startsWith('multi-')) return { file: `${mobile}Multi`, screen: state.slice('multi-'.length) };
+  return { file: `${mobile}Main`, screen: state };
+}
 
 const QUIZ = ['quit-button', 'timer', 'progress', 'ruler', 'question', 'word', 'status',
   'choice-substantiv', 'choice-verb', 'choice-adjektiv'];
@@ -25,7 +35,11 @@ export const TARGETS = {
   wrong: ['app', ...QUIZ],
   correct: ['app', ...QUIZ],
   result: ['app', 'result-kicker', 'result-time', 'result-line', 'miss-line', 'best-line',
-    'history', 'tile-0', 'tile-1', 'legend', 'play-again', 'to-start']
+    'history', 'tile-0', 'tile-1', 'legend', 'play-again', 'to-start'],
+  'multi-any': ['app', ...QUIZ, 'examples', 'example-0', 'example-1', 'example-class-0'],
+  'multi-all-partial': ['app', ...QUIZ, 'badge'],
+  'multi-all-done': ['app', ...QUIZ, 'badge'],
+  'multi-result': ['app', 'result-time', 'history', 'tile-0', 'tile-6', 'tile-marker-6', 'legend', 'legend-multi']
 };
 
 // Browser-side: reads the measurable values of one element.
@@ -80,7 +94,7 @@ export function locateInDesign(root, names) {
     'choice-verb': () => root.querySelector('button[aria-label^="verb"]'),
     'choice-adjektiv': () => root.querySelector('button[aria-label^="adjektiv"]'),
     'result-kicker': () => is('RESULTAT · ORDKLASSER'),
-    'result-time': () => is('23,4'),
+    'result-time': () => root.querySelector('span[style*="168px"], span[style*="104px"]'),
     'result-line': () => starts('Du klarade'),
     'miss-line': () => starts('Felklick'),
     'best-line': () => starts('Bästa tid'),
@@ -89,6 +103,14 @@ export function locateInDesign(root, names) {
     history: () => is('hund').parentElement.parentElement,
     legend: () => is('rätt direkt').parentElement,
     'play-again': () => button('spela igen'),
+    badge: () => is('2 ordklasser'),
+    examples: () => root.querySelector('[role=status]').nextElementSibling,
+    'example-0': () => root.querySelector('[role=status]').nextElementSibling.children[0],
+    'example-1': () => root.querySelector('[role=status]').nextElementSibling.children[1],
+    'example-class-0': () => root.querySelector('[role=status]').nextElementSibling.children[0].firstElementChild,
+    'tile-6': () => is('bär').parentElement,
+    'tile-marker-6': () => is('bär').parentElement.querySelector('[aria-hidden]'),
+    'legend-multi': () => is('flera ordklasser'),
     'to-start': () => button('till start')
   };
   const out = {};

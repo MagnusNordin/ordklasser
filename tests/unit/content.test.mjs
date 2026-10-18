@@ -86,3 +86,23 @@ test('dynamic texts equal what the prototype renders for the design states', () 
 test('the real texts file equals the design fixture texts', () => {
   assert.deepEqual(readJson('site/config/texts.sv.json'), readJson('tests/fixtures/design-config/texts.sv.json'));
 });
+
+test('multi-class texts and class data equal the approved artboards', () => {
+  const MULTI = readFileSync(ROOT + 'design/source/Multi.dc.html', 'utf8');
+  const t = config.texts;
+  assert.ok(MULTI.includes(`>${fill(t.badge, { n: 2 })}</span>`));
+  assert.ok(MULTI.includes(`', ${t.ariaAlso}'`));
+  assert.ok(MULTI.includes(`</span>${t.legendMulti}</span>`));
+  const P = loadPrototype('design/source/Multi.dc.html');
+  const theirs = plain(new P({ screen: 'any' }).classes());
+  for (const c of theirs) {
+    const ours = config.classMap[c.key];
+    assert.deepEqual([ours.name, ours.symbol, ours.hint, ours.colors.tint, ours.colors.deep], [c.name, c.sym, c.hint, c.tint, c.deep]);
+  }
+  const at = (screen) => new P({ screen, showHints: true }).renderVals();
+  assert.equal(at('any').statusText, fill(t.promptRightAlso, { word: 'kort', art: 'ett', class: 'adjektiv', others: 'ett substantiv' }));
+  assert.equal(at('all-partial').statusText, fill(t.promptFoundOneMore, { word: 'bär', art: 'ett', class: 'verb' }));
+  assert.equal(at('all-done').statusText, fill(t.promptFoundAll, { word: 'bär', all: 'ett substantiv och ett verb' }));
+  const real = readJson('site/config/words.json').words.find((w) => w.word === 'kort');
+  assert.deepEqual(plain(at('any').examples).map((e) => e.before + e.word + e.after), [real.examples.adjektiv, real.examples.substantiv]);
+});

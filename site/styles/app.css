@@ -290,6 +290,39 @@ button { -webkit-tap-highlight-color: transparent; }
 .choice[data-state="also"] .choice-sym { background: #FFFFFF; }
 .choice[data-dimmed] { opacity: 0.4; }
 
+/* Multi-class words (milestone 6 artboards). */
+.stage[data-multi] { gap: 18px; }
+.badge {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 2px solid var(--line-soft);
+  color: var(--ink);
+}
+.examples { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.example {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 21px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.example-class {
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: var(--tint);
+  color: var(--deep);
+}
+
 /* ---------- result ---------- */
 
 .screen--result {
@@ -335,6 +368,10 @@ button { -webkit-tap-highlight-color: transparent; }
   min-width: 0;
 }
 .tile[data-miss] { border-color: var(--wrong); }
+.tile[data-multi] { position: relative; }
+.tile-marker { position: absolute; top: 9px; right: 9px; display: flex; gap: 3px; }
+.dots { display: flex; gap: 3px; }
+.dot { width: 10px; height: 10px; border-radius: var(--radius-pill); background: var(--dot); }
 .tile-word {
   font-family: var(--font-display);
   font-weight: 800;
@@ -433,6 +470,11 @@ button { -webkit-tap-highlight-color: transparent; }
   .question { font-size: 14px; }
   .word { font-size: 76px; }
   .status { min-height: 48px; font-size: 19px; }
+  .stage[data-multi] { gap: 14px; }
+  .badge { font-size: 15px; padding: 6px 12px; }
+  .examples { gap: 6px; }
+  .example { gap: 10px; font-size: 17px; }
+  .example-class { font-size: 13px; padding: 5px 8px; border-radius: 8px; }
   .choices { flex-direction: column; gap: 12px; }
   .choice {
     flex: none;
@@ -471,7 +513,9 @@ button { -webkit-tap-highlight-color: transparent; }
   .tile { border-radius: var(--radius-tile-mobile); padding: 6px 12px; }
   .tile-word { font-size: 18px; }
   .tile-meta { font-size: 13px; }
-  .legend { gap: 20px; font-size: 14px; }
+  .legend { flex-wrap: wrap; justify-content: center; column-gap: 20px; row-gap: 6px; font-size: 14px; }
+  .tile-marker { top: 8px; right: 8px; }
+  .dot { width: 8px; height: 8px; }
   .swatch--direct { width: 14px; height: 14px; border-radius: 4px; }
   .swatch--missed { width: 10px; height: 10px; border-radius: 4px; }
   .result-actions { flex-direction: column; gap: 10px; margin-top: 0; }

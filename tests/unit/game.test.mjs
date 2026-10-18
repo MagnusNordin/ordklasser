@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   bestLine, choiceState, currentWord, elapsedMs, initialState, isChoiceDimmed, isChoiceDisabled,
-  missLine, reduce, rulerTicks, statusLine
+  exampleLines, missLine, reduce, rulerTicks, showBadge, statusLine
 } from '../../site/src/game.js';
 import { realConfig } from './helpers.mjs';
 
@@ -257,4 +257,30 @@ test('statusLine texts: idle, wrong, right and the multi-class variants', () => 
   const en = { ...classMap, verb: { ...classMap.verb, article: 'en', name: 'räkneord' } };
   const wrongEn = play(started(), [['verb', 1100]]);
   assert.equal(statusLine(wrongEn, en, texts).text, '”hund” är ingen räkneord. Försök igen.');
+});
+
+test('showBadge: only "all" mode and only multi-class words', () => {
+  const multi = [{ word: 'bär', classes: ['substantiv', 'verb'], examples: {} }];
+  assert.equal(showBadge(started(multi, { mode: 'all' })), true);
+  assert.equal(showBadge(started(multi, { mode: 'any' })), false);
+  assert.equal(showBadge(started(ROUND, { mode: 'all' })), false);
+});
+
+test('exampleLines: after a solve, found classes first, missing sentences skipped', () => {
+  const ex = { substantiv: 'Vi plockar bär i skogen.', verb: 'Hon bär en tung väska.' };
+  const round = [{ word: 'bär', classes: ['substantiv', 'verb'], examples: ex }];
+  let s = started(round);
+  assert.deepEqual(exampleLines(s), [], 'nothing before the solve');
+  s = play(s, [['verb', 1500]]);
+  assert.deepEqual(exampleLines(s), [{ key: 'verb', sentence: ex.verb }, { key: 'substantiv', sentence: ex.substantiv }]);
+  const partial = [{ word: 'bär', classes: ['substantiv', 'verb'], examples: { verb: ex.verb } }];
+  assert.deepEqual(exampleLines(play(started(partial), [['substantiv', 1200]])), [{ key: 'verb', sentence: ex.verb }]);
+  const noExamples = [{ word: 'bär', classes: ['substantiv', 'verb'] }];
+  assert.deepEqual(exampleLines(play(started(noExamples), [['verb', 1200]])), []);
+  const single = [{ word: 'hund', classes: ['substantiv'], examples: { substantiv: 'En hund.' } }];
+  assert.deepEqual(exampleLines(play(started(single), [['substantiv', 1200]])), [], 'single-class words keep the design');
+  let all = play(started(round, { mode: 'all' }), [['substantiv', 1100]]);
+  assert.deepEqual(exampleLines(all), [], 'not while a class is still missing');
+  all = play(all, [['verb', 1300]]);
+  assert.deepEqual(exampleLines(all).map((e) => e.key), ['substantiv', 'verb']);
 });

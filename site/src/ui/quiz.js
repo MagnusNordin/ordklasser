@@ -1,6 +1,6 @@
 // Quiz screen: timer, ruler, the word, status line and the class buttons.
-import { fill, formatTime } from '../format.js';
-import { choiceState, elapsedMs, isChoiceDimmed, isChoiceDisabled, rulerTicks, statusLine } from '../game.js';
+import { fill, formatTime, splitExample } from '../format.js';
+import { choiceState, elapsedMs, exampleLines, isChoiceDimmed, isChoiceDisabled, rulerTicks, showBadge, statusLine } from '../game.js';
 import { ICONS, classVars, esc, fitText } from './dom.js';
 
 export function timerText(state, now) {
@@ -35,7 +35,8 @@ export function render(state, ctx, root) {
   const choices = settings.activeClasses.map((key) => {
     const c = classMap[key];
     const st = choiceState(state, key);
-    const aria = c.name + (st === 'wrong' ? ', ' + texts.ariaWrong : st === 'right' ? ', ' + texts.ariaRight : '');
+    const suffix = { wrong: texts.ariaWrong, right: texts.ariaRight, also: texts.ariaAlso }[st];
+    const aria = c.name + (suffix ? ', ' + suffix : '');
     const hint = settings.showHints ? `<span class="choice-hint">${esc(c.hint)}</span>` : '';
     return `
       <button type="button" class="choice" data-testid="choice-${esc(key)}" data-key="${esc(key)}" data-state="${st}"
@@ -44,6 +45,17 @@ export function render(state, ctx, root) {
         <span class="choice-text"><span class="choice-name">${esc(c.name)}</span>${hint}</span>
       </button>`;
   }).join('');
+
+  const badge = showBadge(state)
+    ? `<span class="badge" data-testid="badge">${esc(fill(texts.badge, { n: word.classes.length }))}</span>`
+    : '';
+  const lines = exampleLines(state).map(({ key, sentence }, i) => {
+    const c = classMap[key];
+    const parts = splitExample(sentence, word.word);
+    return `<p class="example" data-testid="example-${i}" lang="sv"><span class="example-class" data-testid="example-class-${i}" style="${classVars(c)}">${esc(c.name)}</span>`
+      + `<span>${esc(parts.before)}${parts.word ? `<b>${esc(parts.word)}</b>` : ''}${esc(parts.after)}</span></p>`;
+  }).join('');
+  const examples = lines ? `<div class="examples" data-testid="examples">${lines}</div>` : '';
 
   root.dataset.screen = 'quiz';
   root.innerHTML = `
@@ -54,10 +66,12 @@ export function render(state, ctx, root) {
       <div class="progress" data-testid="progress">${esc(progress)}</div>
     </div>
     <div class="ruler" aria-hidden="true" data-testid="ruler">${ticks}</div>
-    <div class="stage">
+    <div class="stage"${word.classes.length > 1 ? ' data-multi' : ''}>
       <div class="question" data-testid="question">${esc(texts.question)}</div>
       <div class="word" lang="sv" data-testid="word"${state.solved ? ' data-solved' : ''}>${esc(word.word)}</div>
+      ${badge}
       <p class="status" role="status" aria-live="polite" data-kind="${status.kind}" data-testid="status">${esc(status.text)}</p>
+      ${examples}
     </div>
     <div class="choices" data-hints="${settings.showHints}" data-count="${settings.activeClasses.length}">${choices}</div>
   </div>`;

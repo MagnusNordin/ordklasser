@@ -6,17 +6,25 @@ import { classVars, esc } from './dom.js';
 // ctx: { config, onAgain, onDone }
 export function render(state, ctx, root) {
   const { classMap, texts } = ctx.config;
+  const dot = (k) => `<span class="dot" style="--dot:${classMap[k].colors.deep}"></span>`;
   const time = formatTime(state.totalMs);
   const best = bestLine(state, texts);
   const tiles = state.history.map((h, i) => {
     const c = classMap[h.first];
     const meta = h.classes.map((k) => classMap[k].name).join('/') + ' · ' + formatTime(h.ms) + ' s';
+    const dotKeys = [h.first, ...h.classes.filter((k) => k !== h.first)];
+    const marker = h.classes.length > 1
+      ? `<span class="tile-marker" data-testid="tile-marker-${i}" aria-hidden="true">${dotKeys.map(dot).join('')}</span>`
+      : '';
     return `
-      <div class="tile" data-testid="tile-${i}"${h.miss ? ' data-miss' : ''}${h.classes.length > 1 ? ' data-multi' : ''} style="${classVars(c)}">
+      <div class="tile" data-testid="tile-${i}"${h.miss ? ' data-miss' : ''}${h.classes.length > 1 ? ' data-multi' : ''} style="${classVars(c)}">${marker}
         <span class="tile-word" lang="sv">${esc(h.word)}</span>
         <span class="tile-meta">${esc(meta)}</span>
       </div>`;
   }).join('');
+  const multiLegend = state.history.some((h) => h.classes.length > 1)
+    ? `<span class="legend-item" data-testid="legend-multi"><span class="dots" aria-hidden="true">${ctx.config.settings.activeClasses.slice(0, 2).map(dot).join('')}</span>${esc(texts.legendMulti)}</span>`
+    : '';
   root.dataset.screen = 'result';
   root.innerHTML = `
   <div class="screen screen--result">
@@ -32,6 +40,7 @@ export function render(state, ctx, root) {
       <div class="legend" data-testid="legend">
         <span class="legend-item"><span class="swatch swatch--direct"></span>${esc(texts.legendDirect)}</span>
         <span class="legend-item"><span class="swatch swatch--missed"></span>${esc(texts.legendMissed)}</span>
+        ${multiLegend}
       </div>
     </div>
     <div class="result-actions">

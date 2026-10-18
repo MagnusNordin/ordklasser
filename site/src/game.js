@@ -136,6 +136,20 @@ export function isChoiceDimmed(state, key) {
   return state.solved && (st === 'dimmed' || st === 'wrong');
 }
 
+// "all" mode tells the player up front how many classes a word has.
+export function showBadge(state) {
+  return state.mode === 'all' && state.round[state.index].classes.length > 1;
+}
+
+// Example sentences shown once a multi-class word is solved: the classes the
+// player found first, then the others. Classes without a sentence are skipped.
+export function exampleLines(state) {
+  const word = state.round[state.index];
+  if (!state.solved || word.classes.length < 2) return [];
+  const order = [...state.found, ...word.classes.filter((k) => !state.found.includes(k))];
+  return order.filter((k) => word.examples?.[k]).map((key) => ({ key, sentence: word.examples[key] }));
+}
+
 export function isChoiceDisabled(state, key) {
   return state.solved || state.wrong.includes(key) || state.found.includes(key);
 }

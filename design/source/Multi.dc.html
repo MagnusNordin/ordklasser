@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<title>Ordklasser – flera ordklasser</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1024px; height: 768px; box-sizing: border-box; background: #F6F4EE; color: #17203A; font-family: 'Atkinson Hyperlegible', Verdana, sans-serif; position: relative; overflow: hidden">
+
+<sc-if value="{{isQuiz}}" hint-placeholder-val="{{true}}">
+<div style="height: 768px; box-sizing: border-box; padding: 32px 48px 40px; display: flex; flex-direction: column; gap: 20px">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+    <button type="button" style="font: inherit; font-size: 18px; font-weight: 700; color: #4A5168; background: transparent; border: 2px solid #D9D6CC; border-radius: 999px; height: 44px; padding: 0 18px 0 14px; display: flex; align-items: center; gap: 8px; cursor: pointer; min-width: 128px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>Avsluta</button>
+    <div role="timer" aria-label="Tid" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 20px 0 14px; box-sizing: border-box; border-radius: 999px; background: #FFFFFF; border: 2px solid #E4E1D8; font-weight: 700; font-size: 22px; font-variant-numeric: tabular-nums"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 2.5M10 2h4"></path></svg><span style="min-width: 72px; text-align: right">{{timeText}}</span></div>
+    <div style="font-size: 22px; font-weight: 700; min-width: 128px; text-align: right">{{progressText}}</div>
+  </div>
+
+  <div aria-hidden="true" style="background: #F2C230; border-radius: 8px; height: 48px; padding: 0 16px; display: flex; justify-content: space-between; align-items: flex-start">
+    <sc-for list="{{ticks}}" as="t" hint-placeholder-count="11">
+      <div style="width: 2px; display: flex; flex-direction: column; align-items: center; gap: 3px">
+        <div style="{{t.style}}"></div>
+        <sc-if value="{{t.hasLabel}}" hint-placeholder-val="{{true}}">
+          <span style="font-size: 12px; font-weight: 700; line-height: 1; color: #17203A">{{t.label}}</span>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px">
+    <div style="font-size: 17px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4A5168">Vilken ordklass?</div>
+    <div lang="sv" style="{{wordStyle}}">{{word}}</div>
+    <sc-if value="{{showBadge}}" hint-placeholder-val="{{false}}">
+      <span style="font-size: 17px; font-weight: 700; line-height: 1; padding: 7px 14px; border-radius: 999px; background: #FFFFFF; border: 2px solid #E4E1D8; color: #17203A">2 ordklasser</span>
+    </sc-if>
+    <p role="status" style="{{statusStyle}}">{{statusText}}</p>
+    <sc-if value="{{showExamples}}" hint-placeholder-val="{{false}}">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px">
+        <sc-for list="{{examples}}" as="e" hint-placeholder-count="2">
+          <p style="margin: 0; display: flex; align-items: center; gap: 12px; font-size: 21px; line-height: 1.2; color: #17203A">
+            <span style="{{e.chipStyle}}">{{e.name}}</span>
+            <span>{{e.before}}<b>{{e.word}}</b>{{e.after}}</span>
+          </p>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="display: flex; gap: 20px">
+    <sc-for list="{{choices}}" as="c" hint-placeholder-count="3">
+      <button type="button" disabled="{{c.disabled}}" aria-label="{{c.aria}}" style="{{c.style}}">
+        <span style="{{c.symStyle}}">
+          <sc-if value="{{c.showSym}}" hint-placeholder-val="{{true}}"><span>{{c.sym}}</span></sc-if>
+          <sc-if value="{{c.showCheck}}" hint-placeholder-val="{{false}}"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E7F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></sc-if>
+        </span>
+        <span style="display: flex; flex-direction: column; gap: 6px">
+          <span style="{{c.nameStyle}}">{{c.name}}</span>
+          <sc-if value="{{showHints}}" hint-placeholder-val="{{true}}">
+            <span style="{{c.hintStyle}}">{{c.hint}}</span>
+          </sc-if>
+        </span>
+      </button>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{isResult}}" hint-placeholder-val="{{false}}">
+<div style="height: 768px; box-sizing: border-box; padding: 44px 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px">
+  <div style="font-size: 17px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4A5168">Resultat · Ordklasser</div>
+  <div style="display: flex; align-items: baseline; gap: 12px; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 800; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">
+    <span style="font-size: 168px">{{timeBig}}</span>
+    <span style="font-size: 72px; color: #5A6178">s</span>
+  </div>
+  <p style="margin: 0; font-size: 24px">{{resultLine}}</p>
+  <div style="display: flex; align-items: center; gap: 24px; font-size: 18px; color: #4A5168">
+    <span>{{missLine}}</span>
+    <span style="font-weight: 700; color: #17203A">{{bestLine}}</span>
+  </div>
+  <div style="width: 100%; max-width: 880px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
+    <sc-for list="{{hist}}" as="h" hint-placeholder-count="10">
+      <div style="{{h.style}}">
+        <sc-if value="{{h.multi}}" hint-placeholder-val="{{false}}">
+          <span aria-hidden="true" style="position: absolute; top: 9px; right: 9px; display: flex; gap: 3px">
+            <span style="{{h.dotA}}"></span>
+            <span style="{{h.dotB}}"></span>
+          </span>
+        </sc-if>
+        <span style="{{h.wordStyle}}">{{h.w}}</span>
+        <span style="font-size: 14px; color: #17203A">{{h.meta}}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display: flex; gap: 24px; font-size: 16px; color: #4A5168">
+    <span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 5px; background: #E4E1D8"></span>rätt direkt</span>
+    <span style="display: flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 5px; background: #FCE3DD; border: 2px solid #B5321F"></span>fel först</span>
+    <span style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: flex; gap: 3px"><span style="width: 10px; height: 10px; border-radius: 999px; background: #8A420E"></span><span style="width: 10px; height: 10px; border-radius: 999px; background: #1D4C91"></span></span>flera ordklasser</span>
+  </div>
+  <div style="display: flex; gap: 16px; margin-top: 4px">
+    <button type="button" style="font: inherit; height: 72px; padding: 0 44px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 30px; cursor: pointer">spela igen</button>
+    <button type="button" style="font: inherit; height: 72px; padding: 0 40px; border: 3px solid #17203A; border-radius: 999px; background: transparent; color: #17203A; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 30px; cursor: pointer">till start</button>
+  </div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"screen":{"editor":"enum","options":["any","all-partial","all-done","result"],"default":"any","section":"Visa"},"showHints":{"editor":"boolean","default":true,"section":"Hjälp"},"$preview":{"width":1024,"height":768}}'>
+class Component extends DCLogic {
+  mobile() { return false; }
+  classes() {
+    return [
+      { key: 'substantiv', name: 'substantiv', sym: 'S', hint: 'saker, djur, personer', tint: '#FCE6D4', deep: '#8A420E' },
+      { key: 'verb', name: 'verb', sym: 'V', hint: 'något man gör', tint: '#DCE8FA', deep: '#1D4C91' },
+      { key: 'adjektiv', name: 'adjektiv', sym: 'A', hint: 'hur något är', tint: '#D3F1EA', deep: '#0B6553' }
+    ];
+  }
+  cls(key) {
+    var all = this.classes();
+    for (var i = 0; i < all.length; i++) if (all[i].key === key) return all[i];
+    return all[0];
+  }
+  fmt(ms) {
+    var v = Math.round((ms || 0) / 100) / 10;
+    return v.toFixed(1).replace('.', ',');
+  }
+  renderVals() {
+    var self = this;
+    var M = this.mobile();
+    var screen = this.props.screen ?? 'any';
+    var showHints = this.props.showHints ?? true;
+    var display = "font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;";
+    var total = 10, n = 3, pastMs = 5900;
+
+    var states = {
+      'any': { w: 'kort', found: ['adjektiv'], also: ['substantiv'], solved: true, ms: 2700, badge: false,
+        status: 'Rätt! ”kort” är ett adjektiv – men kan också vara ett substantiv.',
+        examples: [
+          { key: 'adjektiv', before: 'Hon har ', word: 'kort', after: ' hår.' },
+          { key: 'substantiv', before: 'Vi spelar ', word: 'kort', after: '.' }
+        ] },
+      'all-partial': { w: 'bär', found: ['verb'], also: [], solved: false, ms: 1900, badge: true,
+        status: 'Rätt! ”bär” är ett verb. Det finns en ordklass till – hitta den!', examples: [] },
+      'all-done': { w: 'bär', found: ['verb', 'substantiv'], also: [], solved: true, ms: 2700, badge: true,
+        status: 'Rätt! ”bär” kan vara både ett substantiv och ett verb.', examples: [] }
+    };
+    var q = states[screen] || states['any'];
+
+    var done = Math.min(total, n + (q.solved ? 1 : 0));
+    var ticks = [];
+    for (var i = 0; i <= total; i++) {
+      var isCur = !q.solved && i === n + 1;
+      var color = isCur ? '#17203A' : (i <= done ? '#17203A' : 'rgba(23,32,58,0.3)');
+      ticks.push({
+        style: 'width:' + (isCur ? (M ? 4 : 5) : 2) + 'px;height:' + (isCur ? (M ? 28 : 32) : (M ? 18 : 20)) + 'px;background:' + color + ';border-radius:0 0 3px 3px;flex-shrink:0',
+        hasLabel: !isCur,
+        label: String(i)
+      });
+    }
+
+    var choices = this.classes().map(function (c) {
+      var isRight = q.found.indexOf(c.key) >= 0;
+      var isAlso = q.also.indexOf(c.key) >= 0;
+      var dim = q.solved && !isRight && !isAlso;
+      var bg = isRight ? '#1E7F4F' : c.tint;
+      var bd = (isRight || isAlso) ? '#1E7F4F' : c.tint;
+      var fg = isRight ? '#FFFFFF' : c.deep;
+      var sub = isRight ? '#FFFFFF' : '#17203A';
+      var symBg = (isRight || isAlso) ? '#FFFFFF' : c.deep;
+      var base = M
+        ? 'font:inherit;width:100%;height:' + (showHints ? 84 : 70) + 'px;box-sizing:border-box;border-radius:22px;padding:0 18px 0 14px;display:flex;align-items:center;gap:14px;text-align:left;'
+        : 'font:inherit;flex:1 1 0;min-width:0;height:' + (showHints ? 196 : 170) + 'px;box-sizing:border-box;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;text-align:left;';
+      return {
+        name: c.name, hint: c.hint, sym: c.sym,
+        aria: c.name + (isRight ? ', rätt' : isAlso ? ', också rätt' : ''),
+        disabled: isRight || q.solved,
+        showSym: !isRight && !isAlso,
+        showCheck: isRight || isAlso,
+        style: base + 'background:' + bg + ';border:3px solid ' + bd + ';color:' + fg + ';opacity:' + (dim ? 0.4 : 1) + ';cursor:' + (isRight || q.solved ? 'default' : 'pointer'),
+        symStyle: 'width:' + (M ? 44 : 48) + 'px;height:' + (M ? 44 : 48) + 'px;flex-shrink:0;border-radius:999px;background:' + symBg + ';color:#FFFFFF;display:flex;align-items:center;justify-content:center;' + display + 'font-weight:800;font-size:' + (M ? 22 : 24) + 'px',
+        nameStyle: display + 'font-weight:800;font-size:' + (M ? 28 : 40) + 'px;line-height:1;color:' + fg,
+        hintStyle: 'font-size:' + (M ? 15 : 18) + 'px;line-height:1.2;color:' + sub
+      };
+    });
+
+    var examples = q.examples.map(function (e) {
+      var c = self.cls(e.key);
+      return {
+        name: c.name, before: e.before, word: e.word, after: e.after,
+        chipStyle: 'flex-shrink:0;font-size:' + (M ? 13 : 15) + 'px;font-weight:700;line-height:1;padding:' + (M ? '5px 8px' : '6px 10px') + ';border-radius:' + (M ? 8 : 10) + 'px;background:' + c.tint + ';color:' + c.deep
+      };
+    });
+
+    var words = [
+      { w: 'hund', c: ['substantiv'] }, { w: 'glad', c: ['adjektiv'] }, { w: 'skriver', c: ['verb'] }, { w: 'springer', c: ['verb'] }, { w: 'äpple', c: ['substantiv'] },
+      { w: 'mjuk', c: ['adjektiv'] }, { w: 'bär', c: ['substantiv', 'verb'] }, { w: 'fönster', c: ['substantiv'] }, { w: 'trött', c: ['adjektiv'] }, { w: 'bygger', c: ['verb'] }
+    ];
+    var times = [1900, 2400, 1600, 2700, 2000, 4200, 2100, 2200, 2500, 2100];
+    var misses = [false, true, false, true, false, true, false, false, false, false];
+    var tot = times.reduce(function (a, t) { return a + t; }, 0);
+    var dot = M ? 8 : 10;
+    var hist = words.map(function (h, j) {
+      var c = self.cls(h.c[0]);
+      var multi = h.c.length > 1;
+      return {
+        w: h.w,
+        multi: multi,
+        meta: h.c.map(function (k) { return self.cls(k).name; }).join('/') + ' · ' + self.fmt(times[j]) + ' s',
+        dotA: 'width:' + dot + 'px;height:' + dot + 'px;border-radius:999px;background:' + c.deep,
+        dotB: multi ? 'width:' + dot + 'px;height:' + dot + 'px;border-radius:999px;background:' + self.cls(h.c[1]).deep : '',
+        style: 'position:relative;background:' + c.tint + ';border:3px solid ' + (misses[j] ? '#B5321F' : c.tint) + ';border-radius:' + (M ? 14 : 16) + 'px;padding:' + (M ? '6px 12px' : '8px 14px') + ';display:flex;flex-direction:column;gap:2px;box-sizing:border-box;min-width:0',
+        wordStyle: display + 'font-weight:800;font-size:' + (M ? 18 : 22) + 'px;line-height:1.1;color:' + c.deep + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap'
+      };
+    });
+    var missN = misses.filter(function (m) { return m; }).length;
+
+    return {
+      isQuiz: screen !== 'result',
+      isResult: screen === 'result',
+      timeText: this.fmt(pastMs + q.ms) + ' s',
+      progressText: M ? (n + 1) + ' / ' + total : 'Ord ' + (n + 1) + ' av ' + total,
+      ticks: ticks,
+      word: q.w,
+      wordStyle: display + 'font-weight:800;font-size:' + (M ? 76 : 132) + 'px;line-height:1;letter-spacing:-0.02em;color:' + (q.solved ? '#1E7F4F' : '#17203A'),
+      showBadge: q.badge,
+      statusText: q.status,
+      statusStyle: 'margin:0;min-height:' + (M ? 48 : 32) + 'px;text-align:center;font-size:' + (M ? 19 : 26) + 'px;line-height:1.25;font-weight:700;color:#1E7F4F',
+      showExamples: examples.length > 0,
+      examples: examples,
+      choices: choices,
+      showHints: showHints,
+      timeBig: this.fmt(tot),
+      resultLine: 'Du klarade ' + total + ' ord på ' + this.fmt(tot) + ' sekunder.',
+      missLine: 'Felklick på vägen: ' + missN,
+      bestLine: 'Bästa tid: ' + this.fmt(21300) + ' s',
+      hist: hist
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -23,6 +23,7 @@ Useful URLs:
 | `/?ord=20&klasser=substantiv,verb&tips=0&lage=all` | Teacher link: 20 words, only substantiv and verb, no hints, every class of a word must be found. Values are clamped to the config's limits. |
 | `/?seed=7` | Reproducible rounds (used by the tests). |
 | `/?demo=start\|quiz\|wrong\|correct\|result` | The design's example screens, frozen (used by the design tests). |
+| `/?demo=multi-any\|multi-all-partial\|multi-all-done\|multi-result` | The multi-class artboards (milestone 6). |
 
 ## Edit the words
 
@@ -98,10 +99,10 @@ One-time setup: in the repository's *Settings → Pages*, set *Source* to
 
 | Milestone | State |
 |---|---|
-| 1 – Skeleton, deploy, test harness | Done |
-| 2 – Configuration and validation | Done |
-| 3 – Game logic (incl. multi-class rules, both modes) | Done |
-| 4 – Desktop UI | Done – all 5 desktop artboards pass the visual and spec checks |
-| 5 – Mobile layout | Done – all 5 mobile artboards pass |
-| 6 – Multi-class words in the UI | Partly: game rules, status texts and the "also right" outline work. Example sentences, the "2 ordklasser" badge and the result-tile marker wait for new artboards to be drawn and approved (plan §10.6). |
-| 7 – Polish | Done: keyboard play, pause on hidden tab, URL overrides, reduced motion, focus styles, 4-class layout check |
+| 1 – Skeleton, deploy, test harness | Done locally – fonts, background and colors checked at both viewports. The live Pages URL and the "broken commit fails CI" proof need a push. |
+| 2 – Configuration and validation | Done – a typo fails `npm run validate` naming file and word; the config-error page uses design tokens only. |
+| 3 – Game logic | Done – coverage gates pass, zero differences from the prototype's logic. |
+| 4 – Desktop UI | Done – all desktop artboards pass the visual (≤ 1 %) and spec (± 2 px) checks. |
+| 5 – Mobile layout | Done – all mobile artboards pass. |
+| 6 – Multi-class words in the UI | Done – approved artboards exported (`?demo=multi-any`, `multi-all-partial`, `multi-all-done`, `multi-result`); example sentences, "2 ordklasser" badge, "also right" outline, result-tile marker and legend; all 18 artboards pass. |
+| 7 – Polish | Done – keyboard play, pause on hidden tab, URL overrides, reduced motion, focus rings (screenshots at both viewports), 4-class layout. README "add a word" steps followed once locally. |

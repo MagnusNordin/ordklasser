@@ -74,3 +74,23 @@ for (const width of WIDTHS) {
     expect(overflow).toEqual([]);
   });
 }
+
+for (const viewport of Object.keys(SPEC.viewports)) {
+  test(`focus ring is visible at ${viewport} (screenshots attached)`, async ({ page }, info) => {
+    await openGame(page, viewport);
+    await page.keyboard.press('Tab');
+    const start = page.getByTestId('start-button');
+    await expect(start).toBeFocused();
+    await expect(start).toHaveCSS('outline-style', 'solid');
+    await expect(start).toHaveCSS('outline-width', '3px');
+    await expect(start).toHaveCSS('outline-color', SPEC.tokens.colors.ink);
+    await info.attach(`focus-start-${viewport}`, { body: await page.screenshot(), contentType: 'image/png' });
+    await page.keyboard.press('Enter');
+    await page.keyboard.press('Tab');
+    await page.keyboard.press('Tab');
+    const focused = page.locator(':focus');
+    await expect(focused).toHaveAttribute('data-testid', 'choice-substantiv');
+    await expect(focused).toHaveCSS('outline-style', 'solid');
+    await info.attach(`focus-choice-${viewport}`, { body: await page.screenshot(), contentType: 'image/png' });
+  });
+}

@@ -22,10 +22,10 @@ export const REQUIRED_TEXTS = {
   promptFoundOneMore: ['word', 'art', 'class'],
   promptFoundMore: ['word', 'art', 'class', 'n'],
   promptFoundAll: ['word', 'all'],
-  ariaWrong: [], ariaRight: [],
+  ariaWrong: [], ariaRight: [], ariaAlso: [], badge: ['n'],
   resultKicker: [], resultLine: ['n', 'time'], seconds: [],
   noMisses: [], misses: ['n'], newRecord: ['time'], bestTime: ['time'],
-  legendDirect: [], legendMissed: [],
+  legendDirect: [], legendMissed: [], legendMulti: [],
   playAgain: [], toStart: [], configError: []
 };
 

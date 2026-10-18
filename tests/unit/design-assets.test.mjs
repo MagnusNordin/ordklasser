@@ -10,7 +10,7 @@ const spec = readJson('design/spec.json');
 const canvas = readJson('design/source/canvas.json');
 const FIELDS = ['box', 'background', 'color', 'fontFamily', 'fontSize', 'fontWeight', 'radius', 'border', 'opacity', 'text'];
 
-test('all 10 reference PNGs exist with the artboard pixel size', () => {
+test('all 18 reference PNGs exist with the artboard pixel size', () => {
   let count = 0;
   for (const [vp, boards] of Object.entries(ARTBOARDS)) {
     for (const name of Object.values(boards)) {
@@ -21,12 +21,12 @@ test('all 10 reference PNGs exist with the artboard pixel size', () => {
       count++;
     }
   }
-  assert.equal(count, 10);
+  assert.equal(count, 18);
 });
 
 test('every design/source artboard has a reference and matches the canvas index', () => {
   const sources = readdirSync(ROOT + 'design/source').filter((f) => f.endsWith('.dc.html'));
-  assert.equal(sources.length, 10);
+  assert.equal(sources.length, 18);
   assert.deepEqual(sources.sort(), Object.keys(canvas.boards).sort());
   for (const f of sources) {
     const name = f.replace('.dc.html', '');

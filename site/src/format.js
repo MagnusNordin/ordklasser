@@ -34,3 +34,14 @@ export function fill(template, params) {
     return String(params[key]);
   });
 }
+
+// Splits an example sentence around the word so it can be set in bold:
+// ("Vi spelar kort.", "kort") → { before: "Vi spelar ", word: "kort", after: "." }.
+// Matches whole words only, ignoring case; no match → the whole sentence in before.
+export function splitExample(sentence, word) {
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const m = new RegExp(`(^|[^\\p{L}])(${escaped})(?![\\p{L}])`, 'iu').exec(sentence);
+  if (!m) return { before: sentence, word: '', after: '' };
+  const start = m.index + m[1].length;
+  return { before: sentence.slice(0, start), word: m[2], after: sentence.slice(start + m[2].length) };
+}

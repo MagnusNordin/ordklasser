@@ -19,6 +19,8 @@
   "promptFoundAll": "Rätt! ”{word}” kan vara både {all}.",
   "ariaWrong": "fel",
   "ariaRight": "rätt",
+  "ariaAlso": "också rätt",
+  "badge": "{n} ordklasser",
   "resultKicker": "Resultat · Ordklasser",
   "resultLine": "Du klarade {n} ord på {time} sekunder.",
   "seconds": "s",
@@ -28,6 +30,7 @@
   "bestTime": "Bästa tid: {time} s",
   "legendDirect": "rätt direkt",
   "legendMissed": "fel först",
+  "legendMulti": "flera ordklasser",
   "playAgain": "spela igen",
   "toStart": "till start",
   "configError": "Konfigurationen innehåller fel"

@@ -6,7 +6,7 @@
 import { chromium } from '@playwright/test';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { VIEWPORTS, STATES, ARTBOARDS, TARGETS, measureElement, locateInDesign } from './spec-targets.mjs';
+import { VIEWPORTS, STATES, ARTBOARDS, TARGETS, designSource, measureElement, locateInDesign } from './spec-targets.mjs';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const renderer = await readFile(ROOT + 'scripts/dc-render.js', 'utf8');
@@ -20,14 +20,14 @@ await mkdir(ROOT + 'design/reference', { recursive: true });
 
 for (const [vp, size] of Object.entries(VIEWPORTS)) {
   spec.screens[vp] = {};
-  const main = ARTBOARDS[vp].start;
-  const source = await readFile(`${ROOT}design/source/${main}.dc.html`, 'utf8');
   for (const state of STATES) {
+    const { file, screen } = designSource(vp, state);
+    const source = await readFile(`${ROOT}design/source/${file}.dc.html`, 'utf8');
     const page = await browser.newPage({ viewport: size, deviceScaleFactor: 1 });
     await page.setContent(shell);
     await page.evaluate(([src, screen]) => {
       window.renderDC(src, document.getElementById('mount'), { screen });
-    }, [source, state]);
+    }, [source, screen]);
     await page.waitForLoadState('networkidle');
     await page.evaluate(async () => {
       await document.fonts.ready;

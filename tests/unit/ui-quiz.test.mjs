@@ -166,3 +166,57 @@ test('timer text and updateTimer', () => {
   const empty = makeDom().root;
   assert.doesNotThrow(() => updateTimer(s, 1, empty));
 });
+
+test('multi "any": also-right aria, example sentences with the word in bold', () => {
+  const { root } = setup(demoState('multi-any'));
+  assert.equal(T(root, 'choice-substantiv').getAttribute('aria-label'), 'substantiv, också rätt');
+  assert.equal(T(root, 'choice-adjektiv').getAttribute('aria-label'), 'adjektiv, rätt');
+  assert.ok(T(root, 'choice-verb').hasAttribute('data-dimmed'));
+  assert.equal(T(root, 'choice-substantiv').hasAttribute('data-dimmed'), false);
+  assert.ok(root.querySelector('.stage').hasAttribute('data-multi'));
+  assert.equal(T(root, 'badge'), null);
+  const ex = root.querySelectorAll('.example');
+  assert.equal(ex.length, 2);
+  assert.equal(T(root, 'example-class-0').textContent, 'adjektiv');
+  assert.match(T(root, 'example-class-0').getAttribute('style'), /--tint:#D3F1EA/);
+  assert.equal(ex[0].querySelector('b').textContent, 'kort');
+  assert.equal(ex[0].textContent, 'adjektivHon har kort hår.');
+  assert.equal(ex[1].textContent, 'substantivVi spelar kort.');
+});
+
+test('multi "all": badge, partial solve keeps the clock running and buttons open', () => {
+  const partial = demoState('multi-all-partial');
+  const { root, calls } = setup({ ...partial, paused: false, segStart: 0 }, { now: 0 });
+  assert.equal(T(root, 'badge').textContent, '2 ordklasser');
+  assert.equal(T(root, 'word').hasAttribute('data-solved'), false);
+  assert.equal(T(root, 'choice-verb').dataset.state, 'right');
+  assert.equal(T(root, 'choice-verb').disabled, true);
+  assert.equal(T(root, 'choice-substantiv').disabled, false);
+  assert.equal(T(root, 'choice-adjektiv').hasAttribute('data-dimmed'), false);
+  assert.equal(T(root, 'examples'), null);
+  assert.equal(root.querySelectorAll('.tick-bar.is-current').length, 1);
+  updateTimer({ ...partial, paused: false, segStart: 0 }, 1000, root);
+  assert.equal(root.querySelector('.timer-value').textContent, '8,8 s');
+  click(T(root, 'choice-substantiv'));
+  assert.deepEqual(calls, ['substantiv']);
+
+  const done = setup(demoState('multi-all-done')).root;
+  assert.equal(T(done, 'badge').textContent, '2 ordklasser');
+  assert.equal(T(done, 'status').textContent, 'Rätt! ”bär” kan vara både ett substantiv och ett verb.');
+  assert.deepEqual(['substantiv', 'verb', 'adjektiv'].map((k) => T(done, `choice-${k}`).dataset.state), ['right', 'right', 'dimmed']);
+});
+
+test('single-class words keep the original stage', () => {
+  const { root } = setup(demoState('correct'));
+  assert.equal(root.querySelector('.stage').hasAttribute('data-multi'), false);
+  assert.equal(T(root, 'examples'), null);
+  assert.equal(T(root, 'badge'), null);
+});
+
+test('example without the word in it is shown whole', () => {
+  let s = reduce(initialState(), { type: 'START', round: [{ word: 'bär', classes: ['substantiv', 'verb'], examples: { verb: 'Hon lyfter väskan.' } }], now: 0 });
+  s = reduce(s, { type: 'PICK', key: 'verb', now: 10 });
+  const { root } = setup(s);
+  assert.equal(root.querySelector('.example b'), null);
+  assert.equal(T(root, 'example-0').textContent, 'verbHon lyfter väskan.');
+});
