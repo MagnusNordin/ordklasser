@@ -23,9 +23,11 @@ test('the real config passes with zero errors and zero warnings', () => {
   const { errors, warnings, config } = validateConfig(rawConfig());
   assert.deepEqual(errors, []);
   assert.deepEqual(warnings, []);
-  assert.equal(config.words.length, 70);
+  // Counts come from the file, so adding words never breaks this test.
+  const raw = rawConfig().words.words;
+  assert.equal(config.words.length, raw.length);
   assert.deepEqual(Object.keys(config.classMap), ['substantiv', 'verb', 'adjektiv']);
-  assert.equal(config.words.filter((w) => w.classes.length > 1).length, 10);
+  assert.equal(config.words.filter((w) => w.classes.length > 1).length, raw.filter((w) => w.classes.length > 1).length);
 });
 
 test('short and long word forms normalize to the same result', () => {
@@ -138,12 +140,16 @@ test('error: invalid JSON names the file', () => {
 });
 
 test('warnings: missing example sentence, unbalanced class, low contrast', () => {
-  const ex = variant((r) => { delete r.words.words.find((w) => w.word === 'bär').examples.verb; });
+  const ex = variant((r) => { delete r.words.words.find((w) => w.word === 'vila').examples.verb; });
   assert.deepEqual(ex.errors, []);
-  assert.deepEqual(ex.warnings, ['words.json: "bär" saknar exempelmening för verb']);
+  assert.deepEqual(ex.warnings, ['words.json: "vila" saknar exempelmening för verb']);
   assert.ok(ex.config);
 
-  const unbalanced = variant((r) => { r.words.words = r.words.words.filter((w) => !['hund', 'katt', 'bil', 'hus', 'stol', 'boll', 'äpple', 'fönster', 'träd', 'cykel', 'lampa'].includes(w.word)); });
+  // Keep only 9 single-class substantiv (10 are needed for 30-word rounds over 3 classes).
+  const unbalanced = variant((r) => {
+    let kept = 0;
+    r.words.words = r.words.words.filter((w) => w.classes.length !== 1 || w.classes[0] !== 'substantiv' || kept++ < 9);
+  });
   assert.deepEqual(unbalanced.errors, []);
   assert.deepEqual(unbalanced.warnings, ['words.json: substantiv har 9 ord med bara den ordklassen – minst 10 behövs för jämna rundor']);
 
@@ -184,7 +190,7 @@ test('loadConfig fetches all four files with a cache-busting version', async () 
   const fetch = fakeFetch(realFiles());
   const { errors, config } = await loadConfig(fetch, './config/', 'abc 123');
   assert.deepEqual(errors, []);
-  assert.equal(config.words.length, 70);
+  assert.equal(config.words.length, rawConfig().words.words.length);
   assert.deepEqual(fetch.calls.sort(), [
     './config/classes.json?v=abc%20123', './config/settings.json?v=abc%20123',
     './config/texts.sv.json?v=abc%20123', './config/words.json?v=abc%20123'

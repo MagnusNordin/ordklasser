@@ -27,7 +27,13 @@ test('classes: names, symbols, hints, descriptions, examples and colors', () => 
     assert.deepEqual(ours.colors, { tint: c.tint, deep: c.deep });
     assert.equal(ours.article, 'ett');
   }
-  assert.deepEqual(rawConfig().classes, rawConfig('tests/fixtures/design-config').classes, 'real classes equal the design');
+  // The real config equals the design, except that the verb card shows base forms
+  // (äta, läsa, sova, bygga) where the design shows present tense (äter, läser, …).
+  const BASE_FORM_VERBS = { example: 'äta', moreExamples: ['läsa', 'sova', 'bygga'] };
+  const design = rawConfig('tests/fixtures/design-config').classes;
+  const expected = design.map((c) => (c.key === 'verb' ? { ...c, ...BASE_FORM_VERBS } : c));
+  assert.deepEqual(rawConfig().classes, expected, 'real classes equal the design apart from the base-form verbs');
+  assert.deepEqual(design.find((c) => c.key === 'verb').moreExamples, ['läser', 'sover', 'bygger'], 'the design itself is unchanged');
 });
 
 test('word bank of the design fixture equals the prototype bank', () => {

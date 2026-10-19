@@ -25,9 +25,9 @@ test('texts and one card per active class with name, example, description, chips
   assert.equal(cards.length, 3);
   const verb = T(root, 'card-verb');
   assert.equal(verb.querySelector('.card-name').textContent, 'verb');
-  assert.equal(verb.querySelector('.card-example').textContent, 'äter');
+  assert.equal(verb.querySelector('.card-example').textContent, 'äta');
   assert.equal(verb.querySelector('.card-desc').textContent, 'Något man gör eller något som händer.');
-  assert.deepEqual([...verb.querySelectorAll('.chip')].map((c) => c.textContent), ['läser', 'sover', 'bygger']);
+  assert.deepEqual([...verb.querySelectorAll('.chip')].map((c) => c.textContent), ['läsa', 'sova', 'bygga']);
   assert.match(verb.getAttribute('style'), /--tint:#DCE8FA;--deep:#1D4C91/);
   assert.equal(root.querySelector('.cards').getAttribute('style'), '--cols:3');
 });

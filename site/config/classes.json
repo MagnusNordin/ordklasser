@@ -17,8 +17,8 @@
     "symbol": "V",
     "hint": "något man gör",
     "description": "Något man gör eller något som händer.",
-    "example": "äter",
-    "moreExamples": ["läser", "sover", "bygger"],
+    "example": "äta",
+    "moreExamples": ["läsa", "sova", "bygga"],
     "colors": { "tint": "#DCE8FA", "deep": "#1D4C91" }
   },
   {
