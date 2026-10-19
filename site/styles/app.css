@@ -423,15 +423,16 @@ button { -webkit-tap-highlight-color: transparent; }
   .intro { gap: 10px; }
   .title { font-size: 40px; line-height: 1.02; }
   .subtitle { font-size: 18px; }
-  .cards { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+  .cards { display: flex; flex-direction: column; gap: 12px; }
   .card {
     border-radius: var(--radius-card-mobile);
     padding: 16px 18px;
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    /* Equal share of the spare height, but never smaller than the content:
+       on short screens the page scrolls instead of squeezing the cards. */
     flex: 1 1 0;
-    min-height: 0;
   }
   .card-text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
   .card-name { font-size: 14px; }

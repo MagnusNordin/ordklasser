@@ -94,3 +94,34 @@ for (const viewport of Object.keys(SPEC.viewports)) {
     await info.attach(`focus-choice-${viewport}`, { body: await page.screenshot(), contentType: 'image/png' });
   });
 }
+
+// Short phone screens (e.g. iOS Chrome with its toolbars): boxes may make the
+// page scroll, but their content must never spill over their own padding.
+for (const [width, height] of [[402, 680], [375, 600], [360, 560]]) {
+  test(`content stays inside cards, buttons and tiles at ${width}×${height}`, async ({ page }) => {
+    await page.setViewportSize({ width, height });
+    await useFixtureConfig(page);
+    const spill = [];
+    for (const state of STATES) {
+      await page.goto(`./?demo=${state}`);
+      await page.waitForSelector('[data-testid="app"] .screen');
+      await waitForFonts(page);
+      spill.push(...await page.evaluate((state) => {
+        const out = [];
+        for (const box of document.querySelectorAll('.card, .choice, .tile')) {
+          const b = box.getBoundingClientRect();
+          const cs = getComputedStyle(box);
+          const top = b.top + parseFloat(cs.borderTopWidth) + parseFloat(cs.paddingTop) - 1;
+          const bottom = b.bottom - parseFloat(cs.borderBottomWidth) - parseFloat(cs.paddingBottom) + 1;
+          for (const child of box.children) {
+            const r = child.getBoundingClientRect();
+            if (getComputedStyle(child).position === 'absolute' || !r.height) continue;
+            if (r.top < top || r.bottom > bottom) out.push(`${state}: ${box.dataset.testid} › ${child.className}`);
+          }
+        }
+        return out;
+      }, state));
+    }
+    expect(spill).toEqual([]);
+  });
+}
