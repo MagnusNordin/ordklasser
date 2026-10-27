@@ -13,8 +13,8 @@
   --wrong: #B5321F;
   --wrong-tint: #FCE3DD;
 
-  --font-display: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  --font-body: 'Atkinson Hyperlegible', Verdana, sans-serif;
+  --font-display: Anton, 'Arial Narrow', sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 
   --radius-pill: 999px;
   --radius-card: 28px;

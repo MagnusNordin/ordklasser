@@ -8,12 +8,12 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap">
 <style>
 body{margin:0}
 </style>
 </helmet>
-<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F4EE; color: #17203A; font-family: 'Atkinson Hyperlegible', Verdana, sans-serif; position: relative; overflow: hidden">
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F4EE; color: #17203A; font-family: 'DM Sans', system-ui, sans-serif; font-synthesis-weight: none; position: relative; overflow: hidden">
 
 <sc-if value="{{isQuiz}}" hint-placeholder-val="{{true}}">
 <div style="height: 844px; box-sizing: border-box; padding: 20px 20px 28px; display: flex; flex-direction: column; gap: 16px">
@@ -76,7 +76,7 @@ body{margin:0}
 <div style="height: 844px; box-sizing: border-box; padding: 32px 20px 28px; display: flex; flex-direction: column; gap: 16px">
   <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px">
     <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4A5168">Resultat · Ordklasser</div>
-    <div style="display: flex; align-items: baseline; gap: 8px; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 800; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">
+    <div style="display: flex; align-items: baseline; gap: 8px; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 800; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">
       <span style="font-size: 104px">{{timeBig}}</span>
       <span style="font-size: 48px; color: #5A6178">s</span>
     </div>
@@ -106,8 +106,8 @@ body{margin:0}
     </div>
   </div>
   <div style="display: flex; flex-direction: column; gap: 10px">
-    <button type="button" style="font: inherit; height: 60px; padding: 0 28px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 24px; cursor: pointer">spela igen</button>
-    <button type="button" style="font: inherit; height: 52px; padding: 0 28px; border: 3px solid #17203A; border-radius: 999px; background: transparent; color: #17203A; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 22px; cursor: pointer">till start</button>
+    <button type="button" style="font: inherit; height: 60px; padding: 0 28px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 700; font-size: 24px; cursor: pointer">spela igen</button>
+    <button type="button" style="font: inherit; height: 52px; padding: 0 28px; border: 3px solid #17203A; border-radius: 999px; background: transparent; color: #17203A; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 700; font-size: 22px; cursor: pointer">till start</button>
   </div>
 </div>
 </sc-if>
@@ -138,7 +138,7 @@ class Component extends DCLogic {
     var M = this.mobile();
     var screen = this.props.screen ?? 'any';
     var showHints = this.props.showHints ?? true;
-    var display = "font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;";
+    var display = "font-family: Anton, 'Arial Narrow', sans-serif;";
     var total = 10, n = 3, pastMs = 5900;
 
     var states = {

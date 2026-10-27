@@ -46,7 +46,7 @@ does not cover: **a word can belong to more than one class**.
 
 The site itself still has no build step and no runtime dependencies;
 `package.json` only holds dev dependencies for testing.
-| Fonts | Google Fonts: Bricolage Grotesque (display), Atkinson Hyperlegible (body) | As in the design. |
+| Fonts | Google Fonts: Anton (display), DM Sans (body) | Matches the Cutie Poppers shop. |
 | Storage | `localStorage` (wrapped in try/catch) | Best time per configuration; the game works fine without it. |
 
 ---
@@ -424,8 +424,8 @@ One responsive page instead of separate desktop/mobile builds. Breakpoint at
 | `--right` | `#1E7F4F` |
 | `--wrong` | `#B5321F`, tint `#FCE3DD` |
 | class tints/deeps | from `classes.json`, set as CSS custom properties at boot |
-| `--font-display` | Bricolage Grotesque 600–800 |
-| `--font-body` | Atkinson Hyperlegible 400/700 |
+| `--font-display` | Anton 400 |
+| `--font-body` | DM Sans 400/500/700 |
 
 ### Start
 

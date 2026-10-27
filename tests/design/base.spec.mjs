@@ -14,13 +14,13 @@ for (const viewport of Object.keys(SPEC.viewports)) {
     await expect(app).toHaveCSS('background-color', SPEC.tokens.colors.bg);
     await expect(app).toHaveCSS('color', SPEC.tokens.colors.ink);
     const loaded = await page.evaluate(() => ({
-      display: document.fonts.check('800 64px "Bricolage Grotesque"'),
-      body: document.fonts.check('400 16px "Atkinson Hyperlegible"'),
-      bodyBold: document.fonts.check('700 16px "Atkinson Hyperlegible"'),
+      display: document.fonts.check('400 64px Anton'),
+      body: document.fonts.check('400 16px "DM Sans"'),
+      bodyBold: document.fonts.check('700 16px "DM Sans"'),
       faces: Array.from(document.fonts).filter((f) => f.status === 'loaded').map((f) => f.family.replace(/"/g, ''))
     }));
     expect(loaded.display && loaded.body && loaded.bodyBold, JSON.stringify(loaded)).toBe(true);
-    expect(new Set(loaded.faces)).toEqual(new Set(['Bricolage Grotesque', 'Atkinson Hyperlegible']));
+    expect(new Set(loaded.faces)).toEqual(new Set(['Anton', 'DM Sans']));
   });
 
   test(`${viewport}: config error message uses design tokens only`, async ({ page }) => {

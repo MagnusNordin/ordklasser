@@ -8,18 +8,18 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap">
 <style>
 body{margin:0}
 </style>
 </helmet>
-<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F4EE; color: #17203A; font-family: 'Atkinson Hyperlegible', Verdana, sans-serif; position: relative; overflow: hidden">
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F4EE; color: #17203A; font-family: 'DM Sans', system-ui, sans-serif; font-synthesis-weight: none; position: relative; overflow: hidden">
 
 <sc-if value="{{isStart}}" hint-placeholder-val="{{true}}">
 <div style="height: 844px; box-sizing: border-box; padding: 40px 20px 28px; display: flex; flex-direction: column; gap: 22px">
   <div style="display: flex; flex-direction: column; gap: 10px">
     <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4A5168">Ordklasser</div>
-    <h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 800; font-size: 40px; line-height: 1.02; letter-spacing: -0.02em">Vilken ordklass är ordet?</h1>
+    <h1 style="margin: 0; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.02; letter-spacing: -0.02em">Vilken ordklass är ordet?</h1>
     <p style="margin: 0; font-size: 18px; color: #4A5168">Så känner du igen dem. Sedan kör du mot klockan.</p>
   </div>
   <div style="display: flex; flex-direction: column; gap: 12px; flex-grow: 1; min-height: 0">
@@ -39,7 +39,7 @@ body{margin:0}
     </sc-for>
   </div>
   <div style="display: flex; flex-direction: column; gap: 10px">
-    <button type="button" onClick="{{start}}" style="font: inherit; height: 64px; padding: 0 28px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 26px; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer">starta<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    <button type="button" onClick="{{start}}" style="font: inherit; height: 64px; padding: 0 28px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer">starta<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
     <p style="margin: 0; font-size: 15px; color: #4A5168; text-align: center">{{roundText}}</p>
     <sc-if value="{{hasBest}}" hint-placeholder-val="{{false}}">
       <p style="margin: 0; font-size: 15px; font-weight: 700; text-align: center">{{bestText}}</p>
@@ -97,7 +97,7 @@ body{margin:0}
 <div style="height: 844px; box-sizing: border-box; padding: 32px 20px 28px; display: flex; flex-direction: column; gap: 16px">
   <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px">
     <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4A5168">Resultat · Ordklasser</div>
-    <div style="display: flex; align-items: baseline; gap: 8px; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 800; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">
+    <div style="display: flex; align-items: baseline; gap: 8px; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 800; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">
       <span style="font-size: 104px">{{timeBig}}</span>
       <span style="font-size: 48px; color: #5A6178">s</span>
     </div>
@@ -122,8 +122,8 @@ body{margin:0}
     </div>
   </div>
   <div style="display: flex; flex-direction: column; gap: 10px">
-    <button type="button" onClick="{{start}}" style="font: inherit; height: 60px; padding: 0 28px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 24px; cursor: pointer">spela igen</button>
-    <button type="button" onClick="{{done}}" style="font: inherit; height: 52px; padding: 0 28px; border: 3px solid #17203A; border-radius: 999px; background: transparent; color: #17203A; font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif; font-weight: 700; font-size: 22px; cursor: pointer">till start</button>
+    <button type="button" onClick="{{start}}" style="font: inherit; height: 60px; padding: 0 28px; border: 0; border-radius: 999px; background: #17203A; color: #FFFFFF; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 700; font-size: 24px; cursor: pointer">spela igen</button>
+    <button type="button" onClick="{{done}}" style="font: inherit; height: 52px; padding: 0 28px; border: 3px solid #17203A; border-radius: 999px; background: transparent; color: #17203A; font-family: Anton, 'Arial Narrow', sans-serif; font-weight: 700; font-size: 22px; cursor: pointer">till start</button>
   </div>
 </div>
 </sc-if>
@@ -245,7 +245,7 @@ class Component extends DCLogic {
     var cur = round[s.n] || { w: '', c: 'substantiv' };
     var wrongPicks = s.wrongPicks || [];
     var showHints = this.props.showHints ?? true;
-    var display = "font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;";
+    var display = "font-family: Anton, 'Arial Narrow', sans-serif;";
     var set = function (patch) { self.setState(Object.assign({}, s, patch, { live: true })); };
 
     var start = function () {

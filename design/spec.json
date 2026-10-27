@@ -23,7 +23,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -36,11 +36,11 @@
               "x": 64,
               "y": 56,
               "w": 896,
-              "h": 21
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -51,13 +51,13 @@
           "title": {
             "box": {
               "x": 64,
-              "y": 89,
+              "y": 90,
               "w": 896,
               "h": 64
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "64px",
             "fontWeight": "800",
             "radius": "0px",
@@ -68,13 +68,13 @@
           "subtitle": {
             "box": {
               "x": 64,
-              "y": 165,
+              "y": 166,
               "w": 896,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "400",
             "radius": "0px",
@@ -85,13 +85,13 @@
           "card-substantiv": {
             "box": {
               "x": 64,
-              "y": 224,
+              "y": 227,
               "w": 282.7,
-              "h": 396
+              "h": 393
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -102,13 +102,13 @@
           "card-verb": {
             "box": {
               "x": 370.7,
-              "y": 224,
+              "y": 227,
               "w": 282.7,
-              "h": 396
+              "h": 393
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -119,13 +119,13 @@
           "card-adjektiv": {
             "box": {
               "x": 677.3,
-              "y": 224,
+              "y": 227,
               "w": 282.7,
-              "h": 396
+              "h": 393
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -137,12 +137,12 @@
             "box": {
               "x": 64,
               "y": 652,
-              "w": 206,
+              "w": 190,
               "h": 72
             },
             "background": "rgb(23, 32, 58)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "30px",
             "fontWeight": "700",
             "radius": "999px",
@@ -152,14 +152,14 @@
           },
           "round-info": {
             "box": {
-              "x": 298,
-              "y": 677,
-              "w": 412,
-              "h": 22
+              "x": 282,
+              "y": 676,
+              "w": 437,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "400",
             "radius": "0px",
@@ -181,7 +181,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -193,12 +193,12 @@
             "box": {
               "x": 48,
               "y": 32,
-              "w": 128,
+              "w": 129,
               "h": 44
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "999px",
@@ -208,14 +208,14 @@
           },
           "timer": {
             "box": {
-              "x": 441,
+              "x": 441.5,
               "y": 32,
               "w": 142,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -226,13 +226,13 @@
           "progress": {
             "box": {
               "x": 848,
-              "y": 40.5,
+              "y": 39.5,
               "w": 128,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "0px",
@@ -249,7 +249,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -259,14 +259,14 @@
           },
           "question": {
             "box": {
-              "x": 410,
-              "y": 223.3,
-              "w": 204.1,
-              "h": 21
+              "x": 412,
+              "y": 222.8,
+              "w": 200.1,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -276,14 +276,14 @@
           },
           "word": {
             "box": {
-              "x": 275,
-              "y": 266.3,
-              "w": 473.9,
+              "x": 297.5,
+              "y": 266.8,
+              "w": 428.9,
               "h": 132
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "132px",
             "fontWeight": "800",
             "radius": "0px",
@@ -293,14 +293,14 @@
           },
           "status": {
             "box": {
-              "x": 387,
-              "y": 420.3,
-              "w": 250,
+              "x": 379.5,
+              "y": 420.8,
+              "w": 265,
               "h": 32.5
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "26px",
             "fontWeight": "400",
             "radius": "0px",
@@ -317,7 +317,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -334,7 +334,7 @@
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(29, 76, 145)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -351,7 +351,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -373,7 +373,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -385,12 +385,12 @@
             "box": {
               "x": 48,
               "y": 32,
-              "w": 128,
+              "w": 129,
               "h": 44
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "999px",
@@ -400,14 +400,14 @@
           },
           "timer": {
             "box": {
-              "x": 441,
+              "x": 441.5,
               "y": 32,
               "w": 142,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -418,13 +418,13 @@
           "progress": {
             "box": {
               "x": 848,
-              "y": 40.5,
+              "y": 39.5,
               "w": 128,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "0px",
@@ -441,7 +441,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -451,14 +451,14 @@
           },
           "question": {
             "box": {
-              "x": 410,
-              "y": 223.3,
-              "w": 204.1,
-              "h": 21
+              "x": 412,
+              "y": 222.8,
+              "w": 200.1,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -468,14 +468,14 @@
           },
           "word": {
             "box": {
-              "x": 275,
-              "y": 266.3,
-              "w": 473.9,
+              "x": 297.5,
+              "y": 266.8,
+              "w": 428.9,
               "h": 132
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "132px",
             "fontWeight": "800",
             "radius": "0px",
@@ -485,14 +485,14 @@
           },
           "status": {
             "box": {
-              "x": 244,
-              "y": 420.3,
-              "w": 536,
+              "x": 242.5,
+              "y": 420.8,
+              "w": 539,
               "h": 32.5
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(181, 50, 31)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "26px",
             "fontWeight": "700",
             "radius": "0px",
@@ -509,7 +509,7 @@
             },
             "background": "rgb(252, 227, 221)",
             "color": "rgb(181, 50, 31)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -526,7 +526,7 @@
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(29, 76, 145)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -543,7 +543,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -565,7 +565,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -577,12 +577,12 @@
             "box": {
               "x": 48,
               "y": 32,
-              "w": 128,
+              "w": 129,
               "h": 44
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "999px",
@@ -592,14 +592,14 @@
           },
           "timer": {
             "box": {
-              "x": 441,
+              "x": 441.5,
               "y": 32,
               "w": 142,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -610,13 +610,13 @@
           "progress": {
             "box": {
               "x": 848,
-              "y": 40.5,
+              "y": 39.5,
               "w": 128,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "0px",
@@ -633,7 +633,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -643,14 +643,14 @@
           },
           "question": {
             "box": {
-              "x": 410,
-              "y": 223.3,
-              "w": 204.1,
-              "h": 21
+              "x": 412,
+              "y": 222.8,
+              "w": 200.1,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -660,14 +660,14 @@
           },
           "word": {
             "box": {
-              "x": 275,
-              "y": 266.3,
-              "w": 473.9,
+              "x": 297.5,
+              "y": 266.8,
+              "w": 428.9,
               "h": 132
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "132px",
             "fontWeight": "800",
             "radius": "0px",
@@ -677,14 +677,14 @@
           },
           "status": {
             "box": {
-              "x": 342.5,
-              "y": 420.3,
-              "w": 339,
+              "x": 340.5,
+              "y": 420.8,
+              "w": 343,
               "h": 32.5
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "26px",
             "fontWeight": "700",
             "radius": "0px",
@@ -701,7 +701,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -718,7 +718,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -735,7 +735,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -757,7 +757,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -767,14 +767,14 @@
           },
           "result-kicker": {
             "box": {
-              "x": 384,
-              "y": 93.7,
-              "w": 256,
-              "h": 21
+              "x": 385.5,
+              "y": 90.2,
+              "w": 253,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -784,14 +784,14 @@
           },
           "result-time": {
             "box": {
-              "x": 326.7,
-              "y": 134.7,
-              "w": 321.1,
+              "x": 345.7,
+              "y": 132.2,
+              "w": 287.1,
               "h": 151.2
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "168px",
             "fontWeight": "800",
             "radius": "0px",
@@ -801,14 +801,14 @@
           },
           "result-line": {
             "box": {
-              "x": 318.5,
-              "y": 305.9,
-              "w": 387,
-              "h": 30
+              "x": 316,
+              "y": 303.4,
+              "w": 392,
+              "h": 31
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "24px",
             "fontWeight": "400",
             "radius": "0px",
@@ -818,14 +818,14 @@
           },
           "miss-line": {
             "box": {
-              "x": 353,
-              "y": 355.9,
-              "w": 155,
-              "h": 22
+              "x": 352.5,
+              "y": 354.4,
+              "w": 160,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "400",
             "radius": "0px",
@@ -835,14 +835,14 @@
           },
           "best-line": {
             "box": {
-              "x": 532,
-              "y": 355.9,
-              "w": 139,
-              "h": 22
+              "x": 536.5,
+              "y": 354.4,
+              "w": 135,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -853,13 +853,13 @@
           "history": {
             "box": {
               "x": 72,
-              "y": 397.9,
+              "y": 398.4,
               "w": 880,
-              "h": 140.4
+              "h": 142.4
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -870,13 +870,13 @@
           "tile-0": {
             "box": {
               "x": 72,
-              "y": 397.9,
+              "y": 398.4,
               "w": 168,
-              "h": 65.2
+              "h": 66.2
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "16px",
@@ -887,13 +887,13 @@
           "tile-1": {
             "box": {
               "x": 250,
-              "y": 397.9,
+              "y": 398.4,
               "w": 168,
-              "h": 65.2
+              "h": 66.2
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "16px",
@@ -903,14 +903,14 @@
           },
           "legend": {
             "box": {
-              "x": 415.5,
-              "y": 558.3,
-              "w": 193,
-              "h": 20
+              "x": 411,
+              "y": 560.8,
+              "w": 202,
+              "h": 21
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -920,14 +920,14 @@
           },
           "play-again": {
             "box": {
-              "x": 287.5,
-              "y": 602.3,
-              "w": 233,
+              "x": 307.5,
+              "y": 605.8,
+              "w": 213,
               "h": 72
             },
             "background": "rgb(23, 32, 58)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "30px",
             "fontWeight": "700",
             "radius": "999px",
@@ -938,13 +938,13 @@
           "to-start": {
             "box": {
               "x": 536.5,
-              "y": 602.3,
-              "w": 200,
+              "y": 605.8,
+              "w": 180,
               "h": 72
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "30px",
             "fontWeight": "700",
             "radius": "999px",
@@ -966,7 +966,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -978,12 +978,12 @@
             "box": {
               "x": 48,
               "y": 32,
-              "w": 128,
+              "w": 129,
               "h": 44
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "999px",
@@ -993,14 +993,14 @@
           },
           "timer": {
             "box": {
-              "x": 441,
+              "x": 441.5,
               "y": 32,
               "w": 142,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1011,13 +1011,13 @@
           "progress": {
             "box": {
               "x": 848,
-              "y": 40.5,
+              "y": 39.5,
               "w": 128,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1034,7 +1034,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -1044,14 +1044,14 @@
           },
           "question": {
             "box": {
-              "x": 410,
-              "y": 187.3,
-              "w": 204.1,
-              "h": 21
+              "x": 412,
+              "y": 186.8,
+              "w": 200.1,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1061,14 +1061,14 @@
           },
           "word": {
             "box": {
-              "x": 394.3,
-              "y": 226.3,
-              "w": 235.5,
+              "x": 408.8,
+              "y": 226.8,
+              "w": 206.5,
               "h": 132
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "132px",
             "fontWeight": "800",
             "radius": "0px",
@@ -1078,14 +1078,14 @@
           },
           "status": {
             "box": {
-              "x": 120,
-              "y": 376.3,
-              "w": 784,
+              "x": 113,
+              "y": 376.8,
+              "w": 798,
               "h": 32.5
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "26px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1102,7 +1102,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1119,7 +1119,7 @@
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(29, 76, 145)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1136,7 +1136,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1146,14 +1146,14 @@
           },
           "examples": {
             "box": {
-              "x": 389.5,
-              "y": 426.8,
-              "w": 245,
+              "x": 384.5,
+              "y": 427.3,
+              "w": 255,
               "h": 62
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1163,14 +1163,14 @@
           },
           "example-0": {
             "box": {
-              "x": 389.5,
-              "y": 426.8,
-              "w": 245,
+              "x": 384.5,
+              "y": 427.3,
+              "w": 255,
               "h": 27
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "21px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1180,14 +1180,14 @@
           },
           "example-1": {
             "box": {
-              "x": 389.5,
-              "y": 461.8,
-              "w": 237,
+              "x": 384.5,
+              "y": 462.3,
+              "w": 248,
               "h": 27
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "21px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1197,14 +1197,14 @@
           },
           "example-class-0": {
             "box": {
-              "x": 389.5,
-              "y": 426.8,
-              "w": 77,
+              "x": 384.5,
+              "y": 427.3,
+              "w": 80,
               "h": 27
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "700",
             "radius": "10px",
@@ -1226,7 +1226,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1238,12 +1238,12 @@
             "box": {
               "x": 48,
               "y": 32,
-              "w": 128,
+              "w": 129,
               "h": 44
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1253,14 +1253,14 @@
           },
           "timer": {
             "box": {
-              "x": 441,
+              "x": 441.5,
               "y": 32,
               "w": 142,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1271,13 +1271,13 @@
           "progress": {
             "box": {
               "x": 848,
-              "y": 40.5,
+              "y": 39.5,
               "w": 128,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1294,7 +1294,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -1304,14 +1304,14 @@
           },
           "question": {
             "box": {
-              "x": 410,
-              "y": 200.8,
-              "w": 204.1,
-              "h": 21
+              "x": 412,
+              "y": 200.3,
+              "w": 200.1,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1321,14 +1321,14 @@
           },
           "word": {
             "box": {
-              "x": 415.5,
-              "y": 239.8,
-              "w": 193.1,
+              "x": 428,
+              "y": 240.3,
+              "w": 168.1,
               "h": 132
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "132px",
             "fontWeight": "800",
             "radius": "0px",
@@ -1338,14 +1338,14 @@
           },
           "status": {
             "box": {
-              "x": 142.5,
-              "y": 442.8,
-              "w": 739,
+              "x": 140.5,
+              "y": 443.3,
+              "w": 743,
               "h": 32.5
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "26px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1362,7 +1362,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1379,7 +1379,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1396,7 +1396,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1406,14 +1406,14 @@
           },
           "badge": {
             "box": {
-              "x": 446.5,
-              "y": 389.8,
-              "w": 131,
+              "x": 445,
+              "y": 390.3,
+              "w": 134,
               "h": 35
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1435,7 +1435,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1447,12 +1447,12 @@
             "box": {
               "x": 48,
               "y": 32,
-              "w": 128,
+              "w": 129,
               "h": 44
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1462,14 +1462,14 @@
           },
           "timer": {
             "box": {
-              "x": 441,
+              "x": 441.5,
               "y": 32,
               "w": 142,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1480,13 +1480,13 @@
           "progress": {
             "box": {
               "x": 848,
-              "y": 40.5,
+              "y": 39.5,
               "w": 128,
-              "h": 27
+              "h": 29
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1503,7 +1503,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -1513,14 +1513,14 @@
           },
           "question": {
             "box": {
-              "x": 410,
-              "y": 200.8,
-              "w": 204.1,
-              "h": 21
+              "x": 412,
+              "y": 200.3,
+              "w": 200.1,
+              "h": 22
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1530,14 +1530,14 @@
           },
           "word": {
             "box": {
-              "x": 415.5,
-              "y": 239.8,
-              "w": 193.1,
+              "x": 428,
+              "y": 240.3,
+              "w": 168.1,
               "h": 132
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "132px",
             "fontWeight": "800",
             "radius": "0px",
@@ -1547,14 +1547,14 @@
           },
           "status": {
             "box": {
-              "x": 183,
-              "y": 442.8,
-              "w": 658,
+              "x": 176.5,
+              "y": 443.3,
+              "w": 671,
               "h": 32.5
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "26px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1571,7 +1571,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1588,7 +1588,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1605,7 +1605,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "28px",
@@ -1615,14 +1615,14 @@
           },
           "badge": {
             "box": {
-              "x": 446.5,
-              "y": 389.8,
-              "w": 131,
+              "x": 445,
+              "y": 390.3,
+              "w": 134,
               "h": 35
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1644,7 +1644,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1654,14 +1654,14 @@
           },
           "result-time": {
             "box": {
-              "x": 326.7,
-              "y": 126.2,
-              "w": 321.1,
+              "x": 345.7,
+              "y": 123.2,
+              "w": 287.1,
               "h": 151.2
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "168px",
             "fontWeight": "800",
             "radius": "0px",
@@ -1674,11 +1674,11 @@
               "x": 72,
               "y": 389.4,
               "w": 880,
-              "h": 157.4
+              "h": 160.4
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1691,11 +1691,11 @@
               "x": 72,
               "y": 389.4,
               "w": 168,
-              "h": 65.2
+              "h": 66.2
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "16px",
@@ -1706,13 +1706,13 @@
           "tile-6": {
             "box": {
               "x": 250,
-              "y": 464.6,
+              "y": 465.6,
               "w": 168,
-              "h": 82.2
+              "h": 84.2
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "16px",
@@ -1723,13 +1723,13 @@
           "tile-marker-6": {
             "box": {
               "x": 383,
-              "y": 476.6,
+              "y": 477.6,
               "w": 23,
               "h": 10
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1739,14 +1739,14 @@
           },
           "legend": {
             "box": {
-              "x": 334,
-              "y": 566.8,
-              "w": 356,
-              "h": 20
+              "x": 326.5,
+              "y": 569.8,
+              "w": 371,
+              "h": 21
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1756,14 +1756,14 @@
           },
           "legend-multi": {
             "box": {
-              "x": 551,
-              "y": 566.8,
-              "w": 139,
-              "h": 20
+              "x": 552.5,
+              "y": 569.8,
+              "w": 145,
+              "h": 21
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1787,7 +1787,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1800,11 +1800,11 @@
               "x": 20,
               "y": 40,
               "w": 350,
-              "h": 18
+              "h": 20
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "700",
             "radius": "0px",
@@ -1815,13 +1815,13 @@
           "title": {
             "box": {
               "x": 20,
-              "y": 68,
+              "y": 70,
               "w": 350,
               "h": 81.6
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "40px",
             "fontWeight": "800",
             "radius": "0px",
@@ -1832,13 +1832,13 @@
           "subtitle": {
             "box": {
               "x": 20,
-              "y": 159.6,
+              "y": 161.6,
               "w": 350,
-              "h": 44
+              "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1849,13 +1849,13 @@
           "card-substantiv": {
             "box": {
               "x": 20,
-              "y": 225.6,
+              "y": 231.6,
               "w": 350,
-              "h": 150.8
+              "h": 141.5
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "24px",
@@ -1866,13 +1866,13 @@
           "card-verb": {
             "box": {
               "x": 20,
-              "y": 388.4,
+              "y": 385.1,
               "w": 350,
-              "h": 150.8
+              "h": 141.5
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "24px",
@@ -1883,13 +1883,13 @@
           "card-adjektiv": {
             "box": {
               "x": 20,
-              "y": 551.2,
+              "y": 538.5,
               "w": 350,
-              "h": 150.8
+              "h": 141.5
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "24px",
@@ -1900,13 +1900,13 @@
           "start-button": {
             "box": {
               "x": 20,
-              "y": 724,
+              "y": 702,
               "w": 350,
               "h": 64
             },
             "background": "rgb(23, 32, 58)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "26px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1917,13 +1917,13 @@
           "round-info": {
             "box": {
               "x": 20,
-              "y": 798,
+              "y": 776,
               "w": 350,
-              "h": 18
+              "h": 40
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1945,7 +1945,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -1962,7 +1962,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "999px",
@@ -1972,14 +1972,14 @@
           },
           "timer": {
             "box": {
-              "x": 130.5,
+              "x": 132,
               "y": 20,
               "w": 122,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "999px",
@@ -1989,14 +1989,14 @@
           },
           "progress": {
             "box": {
-              "x": 319,
-              "y": 31,
-              "w": 51,
-              "h": 22
+              "x": 322,
+              "y": 30,
+              "w": 48,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2013,7 +2013,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -2023,14 +2023,14 @@
           },
           "question": {
             "box": {
-              "x": 110.3,
-              "y": 245.5,
-              "w": 169.4,
-              "h": 17
+              "x": 112.8,
+              "y": 245,
+              "w": 164.4,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2040,14 +2040,14 @@
           },
           "word": {
             "box": {
-              "x": 54.6,
-              "y": 278.5,
-              "w": 280.8,
+              "x": 72.6,
+              "y": 279,
+              "w": 244.8,
               "h": 76
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "76px",
             "fontWeight": "800",
             "radius": "0px",
@@ -2057,14 +2057,14 @@
           },
           "status": {
             "box": {
-              "x": 105,
-              "y": 370.5,
-              "w": 180,
+              "x": 98,
+              "y": 371,
+              "w": 194,
               "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2081,7 +2081,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2098,7 +2098,7 @@
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(29, 76, 145)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2115,7 +2115,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2137,7 +2137,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2154,7 +2154,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "999px",
@@ -2164,14 +2164,14 @@
           },
           "timer": {
             "box": {
-              "x": 130.5,
+              "x": 132,
               "y": 20,
               "w": 122,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "999px",
@@ -2181,14 +2181,14 @@
           },
           "progress": {
             "box": {
-              "x": 319,
-              "y": 31,
-              "w": 51,
-              "h": 22
+              "x": 322,
+              "y": 30,
+              "w": 48,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2205,7 +2205,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -2215,14 +2215,14 @@
           },
           "question": {
             "box": {
-              "x": 110.3,
-              "y": 245.5,
-              "w": 169.4,
-              "h": 17
+              "x": 112.8,
+              "y": 245,
+              "w": 164.4,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2232,14 +2232,14 @@
           },
           "word": {
             "box": {
-              "x": 54.6,
-              "y": 278.5,
-              "w": 280.8,
+              "x": 72.6,
+              "y": 279,
+              "w": 244.8,
               "h": 76
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "76px",
             "fontWeight": "800",
             "radius": "0px",
@@ -2250,13 +2250,13 @@
           "status": {
             "box": {
               "x": 20,
-              "y": 370.5,
+              "y": 371,
               "w": 350,
               "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(181, 50, 31)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2273,7 +2273,7 @@
             },
             "background": "rgb(252, 227, 221)",
             "color": "rgb(181, 50, 31)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2290,7 +2290,7 @@
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(29, 76, 145)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2307,7 +2307,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2329,7 +2329,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2346,7 +2346,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "999px",
@@ -2356,14 +2356,14 @@
           },
           "timer": {
             "box": {
-              "x": 130.5,
+              "x": 132,
               "y": 20,
               "w": 122,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "999px",
@@ -2373,14 +2373,14 @@
           },
           "progress": {
             "box": {
-              "x": 319,
-              "y": 31,
-              "w": 51,
-              "h": 22
+              "x": 322,
+              "y": 30,
+              "w": 48,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2397,7 +2397,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -2407,14 +2407,14 @@
           },
           "question": {
             "box": {
-              "x": 110.3,
-              "y": 245.5,
-              "w": 169.4,
-              "h": 17
+              "x": 112.8,
+              "y": 245,
+              "w": 164.4,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2424,14 +2424,14 @@
           },
           "word": {
             "box": {
-              "x": 54.6,
-              "y": 278.5,
-              "w": 280.8,
+              "x": 72.6,
+              "y": 279,
+              "w": 244.8,
               "h": 76
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "76px",
             "fontWeight": "800",
             "radius": "0px",
@@ -2441,14 +2441,14 @@
           },
           "status": {
             "box": {
-              "x": 73,
-              "y": 370.5,
-              "w": 244,
+              "x": 71,
+              "y": 371,
+              "w": 248,
               "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2465,7 +2465,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2482,7 +2482,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2499,7 +2499,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2521,7 +2521,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2531,14 +2531,14 @@
           },
           "result-kicker": {
             "box": {
-              "x": 81.9,
-              "y": 68.2,
-              "w": 226.1,
-              "h": 18
+              "x": 83.4,
+              "y": 61.7,
+              "w": 223.1,
+              "h": 20
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2548,14 +2548,14 @@
           },
           "result-time": {
             "box": {
-              "x": 79.2,
-              "y": 100.2,
-              "w": 198.1,
+              "x": 91.7,
+              "y": 95.7,
+              "w": 176.1,
               "h": 93.6
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "104px",
             "fontWeight": "800",
             "radius": "0px",
@@ -2565,14 +2565,14 @@
           },
           "result-line": {
             "box": {
-              "x": 46,
-              "y": 207.8,
-              "w": 298,
-              "h": 24
+              "x": 39,
+              "y": 203.3,
+              "w": 312,
+              "h": 25
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2582,14 +2582,14 @@
           },
           "miss-line": {
             "box": {
-              "x": 130.5,
-              "y": 245.8,
-              "w": 129,
-              "h": 18
+              "x": 127.5,
+              "y": 242.3,
+              "w": 135,
+              "h": 20
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2599,14 +2599,14 @@
           },
           "best-line": {
             "box": {
-              "x": 137,
-              "y": 267.8,
-              "w": 116,
-              "h": 18
+              "x": 137.5,
+              "y": 266.3,
+              "w": 115,
+              "h": 20
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2617,13 +2617,13 @@
           "history": {
             "box": {
               "x": 20,
-              "y": 299.8,
+              "y": 300.3,
               "w": 350,
-              "h": 311
+              "h": 316
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2634,13 +2634,13 @@
           "tile-0": {
             "box": {
               "x": 20,
-              "y": 299.8,
+              "y": 300.3,
               "w": 171,
-              "h": 55.8
+              "h": 56.8
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "14px",
@@ -2651,13 +2651,13 @@
           "tile-1": {
             "box": {
               "x": 199,
-              "y": 299.8,
+              "y": 300.3,
               "w": 171,
-              "h": 55.8
+              "h": 56.8
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "14px",
@@ -2667,14 +2667,14 @@
           },
           "legend": {
             "box": {
-              "x": 107.5,
-              "y": 624.8,
-              "w": 175,
-              "h": 17
+              "x": 106,
+              "y": 630.3,
+              "w": 178,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2691,7 +2691,7 @@
             },
             "background": "rgb(23, 32, 58)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "24px",
             "fontWeight": "700",
             "radius": "999px",
@@ -2708,7 +2708,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "22px",
             "fontWeight": "700",
             "radius": "999px",
@@ -2730,7 +2730,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2747,7 +2747,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "999px",
@@ -2757,14 +2757,14 @@
           },
           "timer": {
             "box": {
-              "x": 130.5,
+              "x": 132,
               "y": 20,
               "w": 122,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "999px",
@@ -2774,14 +2774,14 @@
           },
           "progress": {
             "box": {
-              "x": 319,
-              "y": 31,
-              "w": 51,
-              "h": 22
+              "x": 322,
+              "y": 30,
+              "w": 48,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2798,7 +2798,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -2808,14 +2808,14 @@
           },
           "question": {
             "box": {
-              "x": 110.3,
-              "y": 214.5,
-              "w": 169.4,
-              "h": 17
+              "x": 112.8,
+              "y": 214,
+              "w": 164.4,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2825,14 +2825,14 @@
           },
           "word": {
             "box": {
-              "x": 125.5,
-              "y": 245.5,
-              "w": 138.9,
+              "x": 136,
+              "y": 246,
+              "w": 117.9,
               "h": 76
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "76px",
             "fontWeight": "800",
             "radius": "0px",
@@ -2843,13 +2843,13 @@
           "status": {
             "box": {
               "x": 20,
-              "y": 335.5,
+              "y": 336,
               "w": 350,
               "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "0px",
@@ -2866,7 +2866,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2883,7 +2883,7 @@
             },
             "background": "rgb(220, 232, 250)",
             "color": "rgb(29, 76, 145)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2900,7 +2900,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -2910,14 +2910,14 @@
           },
           "examples": {
             "box": {
-              "x": 94,
-              "y": 397.5,
-              "w": 202,
+              "x": 89,
+              "y": 398,
+              "w": 212,
               "h": 52
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2927,14 +2927,14 @@
           },
           "example-0": {
             "box": {
-              "x": 94,
-              "y": 397.5,
-              "w": 202,
+              "x": 89,
+              "y": 398,
+              "w": 212,
               "h": 23
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2944,14 +2944,14 @@
           },
           "example-1": {
             "box": {
-              "x": 94,
-              "y": 426.5,
-              "w": 196,
+              "x": 89,
+              "y": 427,
+              "w": 206,
               "h": 23
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "17px",
             "fontWeight": "400",
             "radius": "0px",
@@ -2961,14 +2961,14 @@
           },
           "example-class-0": {
             "box": {
-              "x": 94,
-              "y": 397.5,
-              "w": 64,
+              "x": 89,
+              "y": 398,
+              "w": 70,
               "h": 23
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "13px",
             "fontWeight": "700",
             "radius": "8px",
@@ -2990,7 +2990,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3007,7 +3007,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "999px",
@@ -3017,14 +3017,14 @@
           },
           "timer": {
             "box": {
-              "x": 130.5,
+              "x": 132,
               "y": 20,
               "w": 122,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "999px",
@@ -3034,14 +3034,14 @@
           },
           "progress": {
             "box": {
-              "x": 319,
-              "y": 31,
-              "w": 51,
-              "h": 22
+              "x": 322,
+              "y": 30,
+              "w": 48,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -3058,7 +3058,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -3068,14 +3068,14 @@
           },
           "question": {
             "box": {
-              "x": 110.3,
-              "y": 225,
-              "w": 169.4,
-              "h": 17
+              "x": 112.8,
+              "y": 224.5,
+              "w": 164.4,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "700",
             "radius": "0px",
@@ -3085,14 +3085,14 @@
           },
           "word": {
             "box": {
-              "x": 138.3,
-              "y": 256,
-              "w": 113.5,
+              "x": 146.8,
+              "y": 256.5,
+              "w": 96.5,
               "h": 76
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "76px",
             "fontWeight": "800",
             "radius": "0px",
@@ -3103,13 +3103,13 @@
           "status": {
             "box": {
               "x": 20,
-              "y": 391,
+              "y": 391.5,
               "w": 350,
               "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "0px",
@@ -3126,7 +3126,7 @@
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(138, 66, 14)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -3143,7 +3143,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -3160,7 +3160,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -3170,14 +3170,14 @@
           },
           "badge": {
             "box": {
-              "x": 136,
-              "y": 346,
-              "w": 118,
+              "x": 135.5,
+              "y": 346.5,
+              "w": 119,
               "h": 31
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "700",
             "radius": "999px",
@@ -3199,7 +3199,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3216,7 +3216,7 @@
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "999px",
@@ -3226,14 +3226,14 @@
           },
           "timer": {
             "box": {
-              "x": 130.5,
+              "x": 132,
               "y": 20,
               "w": 122,
               "h": 44
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "999px",
@@ -3243,14 +3243,14 @@
           },
           "progress": {
             "box": {
-              "x": 319,
-              "y": 31,
-              "w": 51,
-              "h": 22
+              "x": 322,
+              "y": 30,
+              "w": 48,
+              "h": 24
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "18px",
             "fontWeight": "700",
             "radius": "0px",
@@ -3267,7 +3267,7 @@
             },
             "background": "rgb(242, 194, 48)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "8px",
@@ -3277,14 +3277,14 @@
           },
           "question": {
             "box": {
-              "x": 110.3,
-              "y": 225,
-              "w": 169.4,
-              "h": 17
+              "x": 112.8,
+              "y": 224.5,
+              "w": 164.4,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "700",
             "radius": "0px",
@@ -3294,14 +3294,14 @@
           },
           "word": {
             "box": {
-              "x": 138.3,
-              "y": 256,
-              "w": 113.5,
+              "x": 146.8,
+              "y": 256.5,
+              "w": 96.5,
               "h": 76
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "76px",
             "fontWeight": "800",
             "radius": "0px",
@@ -3312,13 +3312,13 @@
           "status": {
             "box": {
               "x": 20,
-              "y": 391,
+              "y": 391.5,
               "w": 350,
               "h": 48
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(30, 127, 79)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "19px",
             "fontWeight": "700",
             "radius": "0px",
@@ -3335,7 +3335,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -3352,7 +3352,7 @@
             },
             "background": "rgb(30, 127, 79)",
             "color": "rgb(255, 255, 255)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -3369,7 +3369,7 @@
             },
             "background": "rgb(211, 241, 234)",
             "color": "rgb(11, 101, 83)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "22px",
@@ -3379,14 +3379,14 @@
           },
           "badge": {
             "box": {
-              "x": 136,
-              "y": 346,
-              "w": 118,
+              "x": 135.5,
+              "y": 346.5,
+              "w": 119,
               "h": 31
             },
             "background": "rgb(255, 255, 255)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "15px",
             "fontWeight": "700",
             "radius": "999px",
@@ -3408,7 +3408,7 @@
             },
             "background": "rgb(246, 244, 238)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3418,14 +3418,14 @@
           },
           "result-time": {
             "box": {
-              "x": 79.2,
-              "y": 100.2,
-              "w": 198.1,
+              "x": 91.7,
+              "y": 95.7,
+              "w": 176.1,
               "h": 93.6
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
+            "fontFamily": "Anton, \"Arial Narrow\", sans-serif",
             "fontSize": "104px",
             "fontWeight": "800",
             "radius": "0px",
@@ -3436,13 +3436,13 @@
           "history": {
             "box": {
               "x": 20,
-              "y": 299.8,
+              "y": 300.3,
               "w": 350,
-              "h": 311
+              "h": 316
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3453,13 +3453,13 @@
           "tile-0": {
             "box": {
               "x": 20,
-              "y": 299.8,
+              "y": 300.3,
               "w": 171,
-              "h": 55.8
+              "h": 56.8
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "14px",
@@ -3470,13 +3470,13 @@
           "tile-6": {
             "box": {
               "x": 20,
-              "y": 491.2,
+              "y": 494.7,
               "w": 171,
-              "h": 55.8
+              "h": 56.8
             },
             "background": "rgb(252, 230, 212)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "14px",
@@ -3487,13 +3487,13 @@
           "tile-marker-6": {
             "box": {
               "x": 161,
-              "y": 502.2,
+              "y": 505.7,
               "w": 19,
               "h": 8
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(23, 32, 58)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "16px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3503,14 +3503,14 @@
           },
           "legend": {
             "box": {
-              "x": 36,
-              "y": 624.8,
-              "w": 318,
-              "h": 17
+              "x": 32.5,
+              "y": 630.3,
+              "w": 325,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3520,14 +3520,14 @@
           },
           "legend-multi": {
             "box": {
-              "x": 231,
-              "y": 624.8,
-              "w": 123,
-              "h": 17
+              "x": 230.5,
+              "y": 630.3,
+              "w": 127,
+              "h": 18
             },
             "background": "rgba(0, 0, 0, 0)",
             "color": "rgb(74, 81, 104)",
-            "fontFamily": "\"Atkinson Hyperlegible\", Verdana, sans-serif",
+            "fontFamily": "\"DM Sans\", system-ui, sans-serif",
             "fontSize": "14px",
             "fontWeight": "400",
             "radius": "0px",
@@ -3553,8 +3553,8 @@
       "wrongTint": "rgb(252, 227, 221)"
     },
     "fonts": {
-      "display": "\"Bricolage Grotesque\", \"Avenir Next\", system-ui, sans-serif",
-      "body": "\"Atkinson Hyperlegible\", Verdana, sans-serif"
+      "display": "Anton, \"Arial Narrow\", sans-serif",
+      "body": "\"DM Sans\", system-ui, sans-serif"
     },
     "radii": {
       "pill": "999px",
